@@ -21,16 +21,16 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{url('/')}}"> Asosiy  </a>
+                        <a class="nav-link" href="{{route('main')}}"> Asosiy  </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{('products')}}"> Kitoblar </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="{{route('about')}}">Biz haqimizda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="{{route('contact')}}">Aloqa</a>
                     </li>
                 </ul>
             </div>
