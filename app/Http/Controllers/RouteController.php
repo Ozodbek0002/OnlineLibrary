@@ -22,4 +22,5 @@ class RouteController extends Controller
     public function contact(){
         return view('User.contact');
     }
+
 }

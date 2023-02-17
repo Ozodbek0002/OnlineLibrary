@@ -20,16 +20,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
 
-                    <li class="nav-item active">
+                    <li class="nav-item {{ Route::is('main') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('main')}}"> Asosiy  </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Route::is('products') ? 'active' : '' }}">
                         <a class="nav-link" href="{{('products')}}"> Kitoblar </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Route::is('about') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('about')}}">Biz haqimizda</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Route::is('contact') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('contact')}}">Aloqa</a>
                     </li>
                 </ul>
