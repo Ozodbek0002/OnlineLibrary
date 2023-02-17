@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('autor');
-            $table->string('page');
+            $table->string('title');
+            $table->string('author');
             $table->string('image');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
+            $table->foreignId('cover_id')->constrained()->onDelete('cascade');
+            $table->integer('page');
             $table->integer('price');
             $table->integer('price_daily');
             $table->integer('count');
@@ -25,9 +27,7 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
         Schema::dropIfExists('books');
