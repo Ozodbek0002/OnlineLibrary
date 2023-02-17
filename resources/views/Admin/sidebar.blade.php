@@ -121,9 +121,9 @@
 
         <!-- Main -->
         <li class="menu-item">
-            <a href="tables-basic.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-table"></i>
-                <div data-i18n="Tables">Tables</div>
+            <a href="" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-book"></i>
+                <div data-i18n="Tables">Kitoblar</div>
             </a>
         </li>
 
