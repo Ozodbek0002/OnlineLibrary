@@ -36,7 +36,7 @@
                         <div class="row grid">
                             <div class="col-lg-4 col-md-4 all des">
                                 <div class="product-item">
-                                    <a href="#"><img src="assets/images/product_01.jpg" alt=""></a>
+                                    <a href="#"><img src="{{asset('user/assets/images/product_01.jpg')}}" alt=""></a>
                                     <div class="down-content">
                                         <a href="#"><h4>Tittle goes here</h4></a>
                                         <h6>$18.25</h6>
@@ -52,9 +52,11 @@
                                     </div>
                                 </div>
                             </div>
+
+
                             <div class="col-lg-4 col-md-4 all dev">
                                 <div class="product-item">
-                                    <a href="#"><img src="assets/images/product_02.jpg" alt=""></a>
+                                    <a href="#"><img src="user/assets/images/product_02.jpg" alt=""></a>
                                     <div class="down-content">
                                         <a href="#"><h4>Tittle goes here</h4></a>
                                         <h6>$16.75</h6>
@@ -72,7 +74,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 all gra">
                                 <div class="product-item">
-                                    <a href="#"><img src="assets/images/product_03.jpg" alt=""></a>
+                                    <a href="#"><img src="user/assets/images/product_03.jpg" alt=""></a>
                                     <div class="down-content">
                                         <a href="#"><h4>Tittle goes here</h4></a>
                                         <h6>$32.50</h6>
@@ -90,7 +92,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 all gra">
                                 <div class="product-item">
-                                    <a href="#"><img src="assets/images/product_04.jpg" alt=""></a>
+                                    <a href="#"><img src="user/assets/images/product_04.jpg" alt=""></a>
                                     <div class="down-content">
                                         <a href="#"><h4>Tittle goes here</h4></a>
                                         <h6>$24.60</h6>
@@ -108,7 +110,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 all dev">
                                 <div class="product-item">
-                                    <a href="#"><img src="assets/images/product_05.jpg" alt=""></a>
+                                    <a href="#"><img src="user/assets/images/product_05.jpg" alt=""></a>
                                     <div class="down-content">
                                         <a href="#"><h4>Tittle goes here</h4></a>
                                         <h6>$18.75</h6>
@@ -126,7 +128,7 @@
                             </div>
                             <div class="col-lg-4 col-md-4 all des">
                                 <div class="product-item">
-                                    <a href="#"><img src="assets/images/product_06.jpg" alt=""></a>
+                                    <a href="#"><img src="user/assets/images/product_06.jpg" alt=""></a>
                                     <div class="down-content">
                                         <a href="#"><h4>Tittle goes here</h4></a>
                                         <h6>$12.50</h6>
@@ -142,15 +144,18 @@
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-12">
                     <ul class="pages">
                         <li><a href="#">1</a></li>
-                        <li class="active"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
                         <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
                     </ul>
                 </div>
