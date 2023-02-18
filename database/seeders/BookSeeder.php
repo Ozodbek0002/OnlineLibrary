@@ -18,7 +18,7 @@ class BookSeeder extends Seeder
             'title' => 'The Lord of the Rings',
             'author' => 'J. R. R. Tolkien',
             'price' => 20,
-            'photo' => 'https://images-na.ssl-images-amazon.com/images/I/51Z9ZQZQFJL._SX331_BO1,204,203,200_.jpg',
+            'image' => null,
             'price_daily' => 2,
             'page' => 1216,
             'count' => 10,
