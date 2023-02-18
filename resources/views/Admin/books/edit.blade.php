@@ -25,10 +25,6 @@
                         </div>
 
 
-                        <div class="form-floating mb-3">
-                            <label class="text text-primary" for="image"> Rasm yuklang</label>
-                            <input type="file" id="image" class="form-control" name="image">
-                        </div>
 
                         <div class="form-group">
                             <label for=""> Kategoriyasi </label>
@@ -58,14 +54,31 @@
                             </select>
                         </div>
 
-
-                        <div class="form-group">
-                            <label  for="author"> Muallif nomi</label>
-                            <input type="text" name="author" value="{{$book->author}}" class="form-control " id="author">
+                        <div class="form-floating mb-3">
+                            <label class="text text-primary" for="image"> Rasm yuklang</label>
+                            <input type="file" id="image" class="form-control" name="image">
                         </div>
 
 
+                        <div class="form-group">
+                            <label  for="author"> Narxi </label>
+                            <input type="number" name="author" value="{{$book->price}}" class="form-control " id="author">
+                        </div>
 
+                        <div class="form-group">
+                            <label  for="author"> Kunlik narxi </label>
+                            <input type="number" name="author" value="{{$book->price_daily}}" class="form-control " id="author">
+                        </div>
+
+                        <div class="form-group">
+                            <label  for="author"> Sahifasi </label>
+                            <input type="number" name="author" value="{{$book->page}}" class="form-control " id="author">
+                        </div>
+
+                        <div class="form-group">
+                            <label  for="author"> Soni </label>
+                            <input type="number" name="author" value="{{$book->count}}" class="form-control " id="author">
+                        </div>
 
 
                         <button type="submit" id="alert" class="btn btn-primary ">Saqlash</button>

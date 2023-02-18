@@ -26,7 +26,7 @@
                     <form action="{{route('admin.books.store')}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for=""> Maqola nomi</label>
                             <input type="text" name="title" value="{{old('title')}}" class="form-control">
                             @error('title')
