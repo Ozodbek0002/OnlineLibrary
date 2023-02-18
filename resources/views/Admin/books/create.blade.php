@@ -84,33 +84,23 @@
 
                         <div class="form-group mb-3">
                             <label for="author">Kunlik narxi</label>
-                            <input type="number" id="author" class="form-control" name="author">
-                            @error('price')
-                            <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-
-
-
-                        <div class="form-group">
-                            <label for="desc_ru">Kunlik narxi</label>
-                            <textarea class="form-control" name="price_daily" id="text_ru"  rows="4" >{{old('description')}}</textarea>
+                            <input type="number" id="author" class="form-control" name="price_daily">
                             @error('price_daily')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <label for="desc_ru">Sahifasi</label>
-                            <textarea class="form-control" name="page" id="text_ru"  rows="4" >{{old('page')}}</textarea>
+                        <div class="form-group mb-3">
+                            <label for="author">Sahifasi</label>
+                            <input type="number" id="author" class="form-control" name="page">
                             @error('page')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <label for="desc_ru">Soni</label>
-                            <textarea class="form-control" name="count" id="text_ru"  rows="4" >{{old('count')}}</textarea>
+                        <div class="form-group mb-3">
+                            <label for="author">Soni</label>
+                            <input type="number" id="author" class="form-control" name="count">
                             @error('count')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
