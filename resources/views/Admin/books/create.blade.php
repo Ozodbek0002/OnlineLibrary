@@ -56,12 +56,12 @@
 
                          <div class="form-group mb-3">
                             <label for=""> Sirti </label>
-                            <select name="category_id" id="like_to" class="form-control">
+                            <select name="cover_id" id="like_to" class="form-control">
                                 @foreach($cover as $c)
                                 <option value="{{$c->id}}">{{$c->name}}</option>
                                 @endforeach
                             </select>
-                            @error('category_id')
+                            @error('cover_id')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
@@ -74,9 +74,10 @@
                             @enderror
                         </div>
 
+
                         <div class="form-group mb-3">
                             <label for="author">Narxi</label>
-                            <input type="number" id="author" class="form-control" name="author">
+                            <input type="number" id="author" class="form-control" name="price">
                             @error('price')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
