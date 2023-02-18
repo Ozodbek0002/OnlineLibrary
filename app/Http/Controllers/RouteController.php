@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\Request;
 
 class RouteController extends Controller
 {
 
     public function main(){
-        return view('User.main');
+        $books = Book::latest()->take(6)->get();
+        return view('User.main',[
+            'books'=>$books
+        ]);
     }
 
     public function products(){

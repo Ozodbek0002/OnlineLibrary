@@ -34,120 +34,31 @@
 
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>So'ngi kitoblar</h2>
+                        <h2>Yangi kitoblar</h2>
                         <a href="{{route('products')}}">Barcha kitoblarni ko'rish<i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="{{asset('user/assets/images/product_01.jpg')}}" alt=""></a>
-                        <div class="down-content">
-                            <a href="#"><h4>Tittle goes here</h4></a>
-                            <h6>$25.75</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (24)</span>
+                @foreach($books as $book )
+                    <div class="col-md-4">
+                        <div class="product-item">
+                            <a href="#"><img style="width: 100%; height: 250px" src="books/{{$book->image}}" alt=""></a>
+                            <div class="down-content">
+                                <a href="#"><h4>{{$book->title}}</h4></a>
+                                <h6>{{$book->price}} so'm</h6>
+                                <p> {{$book->author}} </p>
+                                <ul class="stars">
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                <span>Sotildi ({{$book->sell_count}})</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="{{asset('user/assets/images/product_02.jpg')}}" alt=""></a>
-                        <div class="down-content">
-                            <a href="#"><h4>Tittle goes here</h4></a>
-                            <h6>$30.25</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (21)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="{{asset('user/assets/images/product_03.jpg')}}" alt=""></a>
-                        <div class="down-content">
-                            <a href="#"><h4>Tittle goes here</h4></a>
-                            <h6>$20.45</h6>
-                            <p>Sixteen Clothing is free CSS template provided by TemplateMo.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (36)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="{{asset('user/assets/images/product_04.jpg')}}" alt=""></a>
-                        <div class="down-content">
-                            <a href="#"><h4>Tittle goes here</h4></a>
-                            <h6>$15.25</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (48)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="{{asset('user/assets/images/product_05.jpg')}}" alt=""></a>
-                        <div class="down-content">
-                            <a href="#"><h4>Tittle goes here</h4></a>
-                            <h6>$12.50</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (16)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="product-item">
-                        <a href="#"><img src="{{asset('user/assets/images/product_06.jpg')}}" alt=""></a>
-                        <div class="down-content">
-                            <a href="#"><h4>Tittle goes here</h4></a>
-                            <h6>$22.50</h6>
-                            <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
-                            <span>Reviews (32)</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
 
             </div>
@@ -165,7 +76,10 @@
                 <div class="col-md-6">
                     <div class="left-content">
                         <h4>Looking for the best products?</h4>
-                        <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This template</a> is free to use for your business websites. However, you have no permission to redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+                        <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This
+                                template</a> is free to use for your business websites. However, you have no permission
+                            to redistribute the downloadable ZIP file on any template collection website. <a
+                                rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
                         <ul class="featured-list">
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur an adipisicing elit</a></li>
@@ -186,25 +100,24 @@
     </div>
 
 
-{{--    <div class="call-to-action">--}}
-{{--        <div class="container">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-md-12">--}}
-{{--                    <div class="inner-content">--}}
-{{--                        <div class="row">--}}
-{{--                            <div class="col-md-8">--}}
-{{--                                <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>--}}
-{{--                            </div>--}}
-{{--                            <div class="col-md-4">--}}
-{{--                                <a href="#" class="filled-button">Purchase Now</a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-
+    {{--    <div class="call-to-action">--}}
+    {{--        <div class="container">--}}
+    {{--            <div class="row">--}}
+    {{--                <div class="col-md-12">--}}
+    {{--                    <div class="inner-content">--}}
+    {{--                        <div class="row">--}}
+    {{--                            <div class="col-md-8">--}}
+    {{--                                <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>--}}
+    {{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>--}}
+    {{--                            </div>--}}
+    {{--                            <div class="col-md-4">--}}
+    {{--                                <a href="#" class="filled-button">Purchase Now</a>--}}
+    {{--                            </div>--}}
+    {{--                        </div>--}}
+    {{--                    </div>--}}
+    {{--                </div>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
 
 @endsection
