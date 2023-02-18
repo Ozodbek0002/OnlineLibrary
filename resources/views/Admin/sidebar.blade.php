@@ -70,8 +70,8 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item active">
-            <a href="" class="menu-link">
+        <li class="menu-item {{ Route::is('admin.dashboard') ? 'active' : '' }}">
+            <a href="{{route('admin.dashboard')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
@@ -79,8 +79,8 @@
 
 
         <!-- Main -->
-        <li class="menu-item">
-            <a href="{{route('admin.books')}}" class="menu-link">
+        <li class="menu-item {{ Route::is('admin.books') ? 'active' : '' }}">
+            <a href="{{route('admin.books')}}" class="menu-link ">
                 <i class="menu-icon tf-icons bx bx-book"></i>
                 <div data-i18n="Tables">Kitoblar</div>
             </a>
