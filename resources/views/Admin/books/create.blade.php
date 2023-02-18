@@ -42,25 +42,80 @@
                             @enderror
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for=""> Kategoriyasi </label>
                             <select name="category_id" id="like_to" class="form-control">
-                                @foreach($categories as $c) @endforeach
+                                @foreach($categories as $c)
                                 <option value="{{$c->id}}">{{$c->name}}</option>
+                                @endforeach
                             </select>
                             @error('category_id')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
+                         <div class="form-group mb-3">
+                            <label for=""> Sirti </label>
+                            <select name="category_id" id="like_to" class="form-control">
+                                @foreach($cover as $c)
+                                <option value="{{$c->id}}">{{$c->name}}</option>
+                                @endforeach
+                            </select>
+                            @error('category_id')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
 
-{{--                        <div class="form-group">--}}
-{{--                            <label for="desc_ru">Qisqacha izoh</label>--}}
-{{--                            <textarea class="form-control" name="description" id="text_ru"  rows="4" >{{old('description')}}</textarea>--}}
-{{--                            @error('description')--}}
-{{--                            <span class="text-danger">{{ $message }}</span>--}}
-{{--                            @enderror--}}
-{{--                        </div>--}}
+                        <div class="form-floating mb-3">
+                            <label class="text text-primary" for="file"> Rasm yuklang</label>
+                            <input type="file" id="image" class="form-control" name="image">
+                            @error('image')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="author">Narxi</label>
+                            <input type="number" id="author" class="form-control" name="author">
+                            @error('price')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="author">Kunlik narxi</label>
+                            <input type="number" id="author" class="form-control" name="author">
+                            @error('price')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="desc_ru">Kunlik narxi</label>
+                            <textarea class="form-control" name="price_daily" id="text_ru"  rows="4" >{{old('description')}}</textarea>
+                            @error('price_daily')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="desc_ru">Sahifasi</label>
+                            <textarea class="form-control" name="page" id="text_ru"  rows="4" >{{old('page')}}</textarea>
+                            @error('page')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label for="desc_ru">Soni</label>
+                            <textarea class="form-control" name="count" id="text_ru"  rows="4" >{{old('count')}}</textarea>
+                            @error('count')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
 
 
 
