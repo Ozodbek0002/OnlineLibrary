@@ -42,13 +42,12 @@ class BookController extends Controller
             'title'=>'required',
             'author'=>'required',
             'image'=>'required',
-            'price'=>'required',
-            'price_daily'=>'required',
             'category_id'=>'required',
             'cover_id'=>'required',
+            'price'=>'required',
+            'price_daily'=>'required',
             'page'=>'required',
             'count'=>'required',
-            'sell_count'=>'required',
         ],[
             'title.required'=>'Iltimos kitob tomini kiriting.',
             'author.required'=>'Iltimos kitob muallifini kiriting.',
@@ -62,17 +61,18 @@ class BookController extends Controller
         ]);
 
         $data->title = $book['title'];
-        $data->description = $book['description'];
         $data->author = $book['author'];
-        $data->category = $request->category;
+        $data->category_id = $request->category_id;
+        $data->cover_id = $request->cover_id;
+        $data->price = $book['price'];
+        $data->price_daily = $book['price_daily'];
+        $data->page = $book['page'];
+        $data->count = $book['count'];
 
         $imagename = $request->file('image')->getClientOriginalName();
         $request->image->move('books', $imagename);
         $data->image = $imagename;
 
-        $filename = $request->file('file')->getClientOriginalName();
-        $request->file->move('books', $filename);
-        $data->file = $filename;
 
         $data->save();
 

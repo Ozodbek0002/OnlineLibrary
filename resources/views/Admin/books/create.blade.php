@@ -1,5 +1,7 @@
-@extends('admin.master')
+@extends('Admin.master')
 @section('content')
+
+
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
@@ -24,41 +26,43 @@
                     <form action="{{route('admin.books.store')}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
 
+                        <div class="form-group">
+                            <label for=""> Maqola nomi</label>
+                            <input type="text" name="title" value="{{old('title')}}" class="form-control">
+                            @error('title')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="author">Muallif nomi</label>
+                            <input type="text" id="author" class="form-control" name="author">
+                            @error('author')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
 
                         <div class="form-group">
-
                             <label for=""> Kategoriyasi </label>
                             <select name="category_id" id="like_to" class="form-control">
                                 @foreach($categories as $c) @endforeach
                                 <option value="{{$c->id}}">{{$c->name}}</option>
                             </select>
-
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for=""> Maqola nomi</label>
-                            <input type="text" name="title" value="{{old('title')}}" class="form-control">
-                            @error('title')
+                            @error('category_id')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
-                        <div class="form-group">
-                            <label for="desc_ru">Qisqacha izoh</label>
-                            <textarea class="form-control" name="description" id="text_ru"  rows="4" >{{old('description')}}</textarea>
-                            @error('description')
-                            <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
 
-                        <div class="form-floating mb-3">
-                            <label class="text text-primary" for="floatingInput"> Maqola faylini yuklang</label>
-                            <input type="file" name="file" class="form-control " id="floatingInput"  >
-                            @error('file')
-                            <span class="text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
+{{--                        <div class="form-group">--}}
+{{--                            <label for="desc_ru">Qisqacha izoh</label>--}}
+{{--                            <textarea class="form-control" name="description" id="text_ru"  rows="4" >{{old('description')}}</textarea>--}}
+{{--                            @error('description')--}}
+{{--                            <span class="text-danger">{{ $message }}</span>--}}
+{{--                            @enderror--}}
+{{--                        </div>--}}
+
+
 
 
                         <button type="submit" id="alert" class="btn btn-primary " onclick="end()">Saqlash</button>
@@ -66,6 +70,8 @@
 
 
                     </form>
+
+
                 </div>
             </div>
         </div>

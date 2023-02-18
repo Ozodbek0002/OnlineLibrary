@@ -22,7 +22,7 @@ return new class extends Migration
             $table->integer('price');
             $table->integer('price_daily');
             $table->integer('count');
-            $table->integer('sell_count');
+            $table->integer('sell_count')->default(0);
             $table->timestamps();
         });
     }
