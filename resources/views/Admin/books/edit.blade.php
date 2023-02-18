@@ -11,7 +11,7 @@
                 <hr>
                 <div class="card-body">
 
-                    <form action="{{route('admin.books.update',$book->id)}}" method="POST" accept-charset="UTF-8" nctype="multipart/form-data">
+                    <form action="{{route('admin.books.update',$book->id)}}" method="POST" accept-charset="UTF-8" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -27,8 +27,8 @@
 
                         <div class="form-group">
                             <label for=""> Kategoriyasi </label>
-                            <select  name="category" id="like_to" class="form-control">
-                                <option value="{{$book->category}}" style="color: blue">
+                            <select  name="category_id" id="like_to" class="form-control">
+                                <option value="{{$book->category_id}}" style="color: blue">
                                     {{ $book->category->name }}
                                 </option>
                                 @foreach($categories as $c)
@@ -41,8 +41,8 @@
 
                         <div class="form-group">
                             <label for=""> Sirti </label>
-                            <select  name="category" id="like_to" class="form-control">
-                                <option value="{{$book->cover->id}}" style="color: blue">
+                            <select  name="cover_id" id="like_to" class="form-control">
+                                <option value="{{$book->cover_id}}" style="color: blue">
                                     {{ $book->cover->name }}
                                 </option>
                                 @foreach($covers as $c)
@@ -60,22 +60,22 @@
 
                         <div class="form-group">
                             <label  for="author"> Narxi </label>
-                            <input type="number" name="author" value="{{$book->price}}" class="form-control " id="author">
+                            <input type="number" name="price" value="{{$book->price}}" class="form-control " id="author">
                         </div>
 
                         <div class="form-group">
                             <label  for="author"> Kunlik narxi </label>
-                            <input type="number" name="author" value="{{$book->price_daily}}" class="form-control " id="author">
+                            <input type="number" name="price_daily" value="{{$book->price_daily}}" class="form-control " id="author">
                         </div>
 
                         <div class="form-group">
                             <label  for="author"> Sahifasi </label>
-                            <input type="number" name="author" value="{{$book->page}}" class="form-control " id="author">
+                            <input type="number" name="page" value="{{$book->page}}" class="form-control " id="author">
                         </div>
 
                         <div class="form-group">
                             <label  for="author"> Soni </label>
-                            <input type="number" name="author" value="{{$book->count}}" class="form-control " id="author">
+                            <input type="number" name="count" value="{{$book->count}}" class="form-control " id="author">
                         </div>
 
 

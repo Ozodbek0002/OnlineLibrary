@@ -29,11 +29,11 @@
                             <th class="" scope="col">T/R</th>
                             <th class="" scope="col"> Nomi</th>
                             <th class="" scope="col"> Muallif</th>
-                            <th class="" scope="col"> Kategoriya</th>
-                            <th class="" scope="col"> Muqova</th>
-                            <th class="" scope="col"> Narxi</th>
-                            <th class="" scope="col"> Kunlik</th>
-                            <th class="" scope="col"> Beti</th>
+{{--                            <th class="" scope="col"> Kategoriya</th>--}}
+{{--                            <th class="" scope="col"> Muqova</th>--}}
+{{--                            <th class="" scope="col"> Narxi</th>--}}
+{{--                            <th class="" scope="col"> Kunlik</th>--}}
+{{--                            <th class="" scope="col"> Beti</th>--}}
                             <th class="" scope="col"> Soni</th>
                             <th class="" scope="col"> Sotildi</th>
                             <th class="" scope="col">Amallar</th>
@@ -46,11 +46,11 @@
                                 <td class="col-1">{{($books->currentpage()-1)*($books->perpage())+$ind+1}}</td>
                                 <td>{!! $poet->title  !!}</td>
                                 <td>{!! $poet->author !!}</td>
-                                <td>{!! $poet->category->name !!}</td>
-                                <td>{!! $poet->cover->name !!}</td>
-                                <td>{!! $poet->price !!}</td>
-                                <td>{!! $poet->price_daily !!}</td>
-                                <td>{!! $poet->page !!}</td>
+{{--                                <td>{!! $poet->category->name !!}</td>--}}
+{{--                                <td>{!! $poet->cover->name !!}</td>--}}
+{{--                                <td>{!! $poet->price !!}</td>--}}
+{{--                                <td>{!! $poet->price_daily !!}</td>--}}
+{{--                                <td>{!! $poet->page !!}</td>--}}
                                 <td>{!! $poet->count !!}</td>
                                 <td>{!! $poet->sell_count !!}</td>
                                 <td class="col-2">

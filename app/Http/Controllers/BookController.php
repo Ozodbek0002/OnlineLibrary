@@ -19,9 +19,7 @@ class BookController extends Controller
         return response(view('admin.books.index', ['books'=>$books]));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+
     public function create(): Response
     {
         $categories = Category::all();
@@ -32,9 +30,7 @@ class BookController extends Controller
         ]));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request): RedirectResponse
     {
         $data = new Book();
@@ -80,14 +76,11 @@ class BookController extends Controller
         return redirect()->route('admin.books');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id): Response
     {
         //
     }
-
 
     public function edit( Book $book): Response
     {
@@ -106,9 +99,13 @@ class BookController extends Controller
     public function update(Request $request, Book $book): RedirectResponse
     {
         $book->title = $request->title;
-        $book->description = $request->description;
         $book->author = $request->author;
-        $book->category = $request->category;
+        $book->category_id = $request->category_id;
+        $book->cover_id = $request->cover_id;
+        $book->price = $request->price;
+        $book->price_daily = $request->price_daily;
+        $book->page = $request->page;
+        $book->page = $request->page;
 
         if ($request->image != null) {
 
