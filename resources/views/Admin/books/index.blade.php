@@ -62,6 +62,7 @@
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm"><span class="btn-label">
                                         <i class="fa fa-trash"></i>
+                                                
                                     </span></button>
                                     </form>
 
@@ -90,3 +91,15 @@
     </div>
 
 @endsection
+
+@if(session('success'))
+
+    <script>
+        swal({
+            icon: 'success',
+            text: 'Muvaffaqqiyatli bajarildi',
+            confirmButtonText: 'Continue',
+        })
+    </script>
+
+@endif

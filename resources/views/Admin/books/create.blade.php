@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-10"><h1 class="card-title">Maqola qo`shish </h1></div>
+                    <div class="col-10"><h1 class="card-title">Kitob qo`shish </h1></div>
                 </div>
                 <hr>
                 <div class="card-body">
@@ -21,18 +21,18 @@
                     @endif
 
 
-                    <form action="{{route('admin.articles.store')}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
+                    <form action="{{route('admin.books.store')}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
 
 
                         <div class="form-group">
 
                             <label for=""> Kategoriyasi </label>
-                            <select name="category" id="like_to" class="form-control">
-                                <option value="uz">Uzbekcha</option>
-                                <option value="en" >Inglischa</option>
-                                <option value="ru" >Ruscha</option>
+                            <select name="category_id" id="like_to" class="form-control">
+                                @foreach($categories as $c) @endforeach
+                                <option value="{{$c->id}}">{{$c->name}}</option>
                             </select>
+
 
                         </div>
 
