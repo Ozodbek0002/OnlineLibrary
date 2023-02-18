@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/main',[RouteController::class,'main'])->name('main');
+Route::get('/',[RouteController::class,'main'])->name('/');
 Route::get('/products',[RouteController::class,'products'])->name('products');
 Route::get('/about',[RouteController::class,'about'])->name('about');
 Route::get('/contact',[RouteController::class,'contact'])->name('contact');
