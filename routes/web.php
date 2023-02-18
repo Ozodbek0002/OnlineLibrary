@@ -14,7 +14,7 @@ Route::get('/', function () {
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(function () {
     Route::get('/', function () {  return view('admin.dashboard');  })->name('dashboard');
-    Route::resource('books', BookController::class);
+    Route::resource('books', BookController::class)->name('index', 'books');
 
 });
 

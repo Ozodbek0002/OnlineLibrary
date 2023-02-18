@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -11,7 +12,8 @@ class BookController extends Controller
 
     public function index(): Response
     {
-        //
+        $books = Book::latest()->paginate(5);
+        return response(view('admin.books.index', ['books'=>$books]));
     }
 
     /**
