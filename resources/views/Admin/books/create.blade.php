@@ -108,8 +108,6 @@
 
 
 
-
-
                         <button type="submit" id="alert" class="btn btn-primary " onclick="end()">Saqlash</button>
                         <input type="reset" class="btn btn-danger" value="Tozalash">
 
