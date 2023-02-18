@@ -20,31 +20,6 @@
                         </div>
 
                         <div class="form-group">
-
-                            <label for=""> Kategoriyasi </label>
-                            <select  name="category" id="like_to" class="form-control">
-                                <option value="{{$book->category}}" style="color: blue">
-                                    {{ $book->category->name }}
-                                </option>
-                                @foreach($categories as $c)
-                                    @if($book->category->name != $c->name)
-                                        <option value="{{$c->id}}">{{$c->name}}</option>
-                                    @endif
-                                @endforeach
-
-                            </select>
-
-                        </div>
-
-
-
-                        <div class="form-group">
-                            <label for="desc_en">Qisqacha izoh </label>
-                            <textarea class="form-control" name="description" id="desc_en"
-                                      rows="4">{{$book->description}}</textarea>
-                        </div>
-
-                        <div class="form-group">
                             <label  for="author"> Muallif nomi</label>
                             <input type="text" name="author" value="{{$book->author}}" class="form-control " id="author">
                         </div>
@@ -55,11 +30,42 @@
                             <input type="file" id="image" class="form-control" name="image">
                         </div>
 
-
-                        <div class="form-floating mb-3">
-                            <label class="text text-primary" for="bookFile"> Kitob faylini yuklang</label>
-                            <input type="file" name="file" class="form-control " id="bookFile">
+                        <div class="form-group">
+                            <label for=""> Kategoriyasi </label>
+                            <select  name="category" id="like_to" class="form-control">
+                                <option value="{{$book->category}}" style="color: blue">
+                                    {{ $book->category->name }}
+                                </option>
+                                @foreach($categories as $c)
+                                    @if($book->category->name != $c->name)
+                                        <option value="{{$c->id}}">{{$c->name}}</option>
+                                    @endif
+                                @endforeach
+                            </select>
                         </div>
+
+                        <div class="form-group">
+                            <label for=""> Sirti </label>
+                            <select  name="category" id="like_to" class="form-control">
+                                <option value="{{$book->cover->id}}" style="color: blue">
+                                    {{ $book->cover->name }}
+                                </option>
+                                @foreach($covers as $c)
+                                    @if($book->category->name != $c->name)
+                                        <option value="{{$c->id}}">{{$c->name}}</option>
+                                    @endif
+                                @endforeach
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label  for="author"> Muallif nomi</label>
+                            <input type="text" name="author" value="{{$book->author}}" class="form-control " id="author">
+                        </div>
+
+
+
 
 
                         <button type="submit" id="alert" class="btn btn-primary ">Saqlash</button>

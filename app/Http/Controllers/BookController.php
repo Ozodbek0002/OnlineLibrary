@@ -94,9 +94,14 @@ class BookController extends Controller
     {
 //        $book = Book::find($id);
 
+        $categpries = Category::all();
+        $covers = Cover::all();
         return response(view('admin.books.edit',[
             'book' => $book,
+            'categories'=>$categpries,
+            'covers'=>$covers
         ]));
+
 
     }
 
