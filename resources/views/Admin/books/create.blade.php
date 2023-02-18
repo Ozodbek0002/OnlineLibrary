@@ -4,11 +4,14 @@
     <div class="col-md-12">
 
         <div class="card">
+
             <div class="card-header">
                 <div class="row">
                     <div class="col-10"><h1 class="card-title">Kitob qo`shish </h1></div>
                 </div>
+
                 <hr>
+
                 <div class="card-body">
 
                     @if ($errors->any())
@@ -66,14 +69,13 @@
                             @enderror
                         </div>
 
-                        <div class="form-floating ">
+                        <div class="form-group ">
                             <label class="text text-primary" for="file"> Rasm yuklang</label>
                             <input type="file" id="image" class="form-control" name="image">
                             @error('image')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-
 
                         <div class="form-group ">
                             <label for="author">Narxi</label>

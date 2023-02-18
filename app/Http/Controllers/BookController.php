@@ -8,6 +8,7 @@ use App\Models\Cover;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\File;
 
 class BookController extends Controller
 {
@@ -87,12 +88,9 @@ class BookController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit( Book $book): Response
     {
-//        $book = Book::find($id);
 
         $categpries = Category::all();
         $covers = Cover::all();
@@ -105,12 +103,29 @@ class BookController extends Controller
 
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id): RedirectResponse
+    public function update(Request $request, Book $book): RedirectResponse
     {
-        //
+        $book->title = $request->title;
+        $book->description = $request->description;
+        $book->author = $request->author;
+        $book->category = $request->category;
+
+        if ($request->image != null) {
+
+            $image_path = public_path("books/{$book->image}");
+
+            if (Book::exists($image_path)) {
+                File::delete($image_path);
+            }
+
+            $imagename = $request->file('image')->getClientOriginalName();
+            $request->image->move('books', $imagename);
+            $book->image = $imagename;
+        };
+
+
+        $book->save();
+        return redirect()->route('admin.books');
     }
 
     /**

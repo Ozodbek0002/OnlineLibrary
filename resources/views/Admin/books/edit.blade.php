@@ -2,6 +2,7 @@
 @section('content')
 
     <div class="col-md-12">
+
         <div class="card">
             <div class="card-header">
                 <div class="row">
@@ -10,8 +11,7 @@
                 <hr>
                 <div class="card-body">
 
-                    <form action="{{route('admin.books.update',$book->id)}}" method="POST" accept-charset="UTF-8"
-                          enctype="multipart/form-data">
+                    <form action="{{route('admin.books.update',$book->id)}}" method="POST" accept-charset="UTF-8" nctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -24,8 +24,6 @@
                             <label  for="author"> Muallif nomi</label>
                             <input type="text" name="author" value="{{$book->author}}" class="form-control " id="author">
                         </div>
-
-
 
                         <div class="form-group">
                             <label for=""> Kategoriyasi </label>
@@ -55,11 +53,10 @@
                             </select>
                         </div>
 
-                        <div class="form-floating mb-3">
+                        <div class="form-group">
                             <label class="text text-primary" for="image"> Rasm yuklang</label>
                             <input type="file" id="image" class="form-control" name="image">
                         </div>
-
 
                         <div class="form-group">
                             <label  for="author"> Narxi </label>
@@ -90,9 +87,11 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 @endsection
+
 
 
 

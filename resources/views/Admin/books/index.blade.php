@@ -2,10 +2,11 @@
 @section('content')
 
     <div class="col-md-12">
-
         <div class="card">
             <div class="card-header">
+
                 <div class="row">
+
                     <div class="col-9"><h1 class="card-title">Kitoblar </h1></div>
                     <div class="col-md-1">
                         <a class="btn btn-primary" href="{{route('admin.books.create')}}">
@@ -15,12 +16,16 @@
                             Kitob qo'shish
                         </a>
                     </div>
+
                 </div>
+
                 <hr>
+
                 <div class="card-body">
+
                     <table class="table table-bordered text-center">
                         <thead>
-                        <tr>
+                            <tr>
                             <th class="" scope="col">T/R</th>
                             <th class="" scope="col"> Nomi</th>
                             <th class="" scope="col"> Muallif</th>
@@ -72,6 +77,7 @@
                         @endforeach
 
                         </tbody>
+
                     </table>
 
                     <div class="container">
@@ -86,10 +92,11 @@
                         </div>
                     </div>
 
+
                 </div>
+
             </div>
         </div>
-
     </div>
 
 @endsection
