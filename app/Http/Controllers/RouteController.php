@@ -16,7 +16,10 @@ class RouteController extends Controller
     }
 
     public function products(){
-        return view('User.products');
+        $books = Book::paginate(2);
+        return view('User.products',[
+            'books'=>$books
+        ]);
     }
 
     public function about(){
