@@ -2,6 +2,7 @@
 @section('content')
 
     <div class="col-md-12">
+
         <div class="card">
             <div class="card-header">
                 <div class="row">
@@ -25,15 +26,15 @@
                     <form action="{{route('admin.books.store')}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
                         @csrf
 
-                        <div class="form-group mb-3">
-                            <label for=""> Maqola nomi</label>
+                        <div class="form-group ">
+                            <label for=""> Kitob nomi</label>
                             <input type="text" name="title" value="{{old('title')}}" class="form-control">
                             @error('title')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group ">
                             <label for="author">Muallif nomi</label>
                             <input type="text" id="author" class="form-control" name="author">
                             @error('author')
@@ -41,7 +42,7 @@
                             @enderror
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group ">
                             <label for=""> Kategoriyasi </label>
                             <select name="category_id" id="like_to" class="form-control">
                                 @foreach($categories as $c)
@@ -53,7 +54,7 @@
                             @enderror
                         </div>
 
-                         <div class="form-group mb-3">
+                         <div class="form-group ">
                             <label for=""> Sirti </label>
                             <select name="cover_id" id="like_to" class="form-control">
                                 @foreach($cover as $c)
@@ -65,7 +66,7 @@
                             @enderror
                         </div>
 
-                        <div class="form-floating mb-3">
+                        <div class="form-floating ">
                             <label class="text text-primary" for="file"> Rasm yuklang</label>
                             <input type="file" id="image" class="form-control" name="image">
                             @error('image')
@@ -74,7 +75,7 @@
                         </div>
 
 
-                        <div class="form-group mb-3">
+                        <div class="form-group ">
                             <label for="author">Narxi</label>
                             <input type="number" id="author" class="form-control" name="price">
                             @error('price')
@@ -82,7 +83,7 @@
                             @enderror
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group ">
                             <label for="author">Kunlik narxi</label>
                             <input type="number" id="author" class="form-control" name="price_daily">
                             @error('price_daily')
@@ -90,7 +91,7 @@
                             @enderror
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group ">
                             <label for="author">Sahifasi</label>
                             <input type="number" id="author" class="form-control" name="page">
                             @error('page')
@@ -98,7 +99,7 @@
                             @enderror
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group ">
                             <label for="author">Soni</label>
                             <input type="number" id="author" class="form-control" name="count">
                             @error('count')
@@ -118,6 +119,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 
