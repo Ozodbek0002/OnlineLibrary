@@ -7,23 +7,18 @@
 
             <div class="card-header">
                 <div class="row">
-                    <div class="col-10"><h1 class="card-title">Kitob qo`shish </h1></div>
+                    <div class="col-10"><h1 class="card-title">Yagi kitob </h1></div>
                 </div>
 
                 <hr>
 
                 <div class="card-body">
 
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <strong>Xatolik..!</strong> Kirish bilan bog'liq muammolar bor?<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+{{--                    @if(session()->has('message'))--}}
+{{--                        <div class="alert alert-success">--}}
+{{--                            {{ session()->get('message') }}--}}
+{{--                        </div>--}}
+{{--                    @endif--}}
 
 
                     <form action="{{route('admin.books.store')}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
@@ -33,7 +28,7 @@
                             <label for=""> Kitob nomi</label>
                             <input type="text" name="title" value="{{old('title')}}" class="form-control">
                             @error('title')
-                            <span class="text-danger">{{ $message }}</span>
+                                <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
@@ -49,7 +44,7 @@
                             <label for=""> Kategoriyasi </label>
                             <select name="category_id" id="like_to" class="form-control">
                                 @foreach($categories as $c)
-                                    <option value="{{$c->id}}">{{$c->name}}</option>
+                                <option value="{{$c->id}}">{{$c->name}}</option>
                                 @endforeach
                             </select>
                             @error('category_id')
@@ -57,11 +52,11 @@
                             @enderror
                         </div>
 
-                        <div class="form-group ">
+                         <div class="form-group ">
                             <label for=""> Sirti </label>
                             <select name="cover_id" id="like_to" class="form-control">
                                 @foreach($cover as $c)
-                                    <option value="{{$c->id}}">{{$c->name}}</option>
+                                <option value="{{$c->id}}">{{$c->name}}</option>
                                 @endforeach
                             </select>
                             @error('cover_id')
@@ -73,7 +68,7 @@
                             <label class="text text-primary" for="file"> Rasm yuklang</label>
                             <input type="file" id="image" class="form-control" name="image">
                             @error('image')
-                            <span class="text-danger">{{ $message }}</span>
+                                <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
@@ -127,17 +122,17 @@
 
 @endsection
 
-{{--@if(session('success'))--}}
+@if(session('success'))
 
-{{--    <script>--}}
-{{--        swal({--}}
-{{--            icon: 'success',--}}
-{{--            text: 'Muvaffaqqiyatli bajarildi',--}}
-{{--            confirmButtonText: 'Continue',--}}
-{{--        })--}}
-{{--    </script>--}}
+    <script>
+        swal({
+            icon: 'success',
+            text: 'Muvaffaqqiyatli bajarildi',
+            confirmButtonText: 'Continue',
+        })
+    </script>
 
-{{--@endif--}}
+@endif
 
 
 

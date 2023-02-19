@@ -16,7 +16,9 @@ class BookController extends Controller
     public function index(): Response
     {
         $books = Book::latest()->paginate(5);
-        return response(view('admin.books.index', ['books'=>$books]));
+        return response(view('admin.books.index', [
+            'books'=>$books
+        ]));
     }
 
 
@@ -73,7 +75,7 @@ class BookController extends Controller
 
         $data->save();
 
-        return redirect()->route('admin.books');
+        return redirect()->route('admin.books')->with('message', 'success');
     }
 
 
@@ -125,9 +127,7 @@ class BookController extends Controller
         return redirect()->route('admin.books');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(Book $book): RedirectResponse
     {
         $book->delete();

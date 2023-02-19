@@ -67,6 +67,7 @@
     </div>
 
     <div class="menu-inner-shadow"></div>
+    <hr>
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
@@ -85,6 +86,22 @@
                 <div data-i18n="Tables">Kitoblar</div>
             </a>
         </li>
+
+         <li class="menu-item {{ Route::is('admin.orders') ? 'active' : '' }}">
+            <a href="{{route('admin.orders')}}" class="menu-link ">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div data-i18n="Tables">Xaridlar</div>
+            </a>
+        </li>
+
+        <li class="menu-item {{ Route::is('admin.messages') ? 'active' : '' }}">
+            <a href="{{route('admin.messages')}}" class="menu-link ">
+                <i class="menu-icon tf-icons bx bx-chat"></i>
+                <div data-i18n="Tables">Xabarlar</div>
+            </a>
+        </li>
+
+
 
 
     </ul>

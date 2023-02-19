@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\RouteController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\MessageController;
 
 
 
@@ -15,6 +18,8 @@ Route::get('/', function () {
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(function () {
     Route::get('/', function () {  return view('admin.dashboard');  })->name('dashboard');
     Route::resource('books', BookController::class)->name('index', 'books');
+    Route::resource('orders',ClientController::class)->name('index','orders');
+    Route::resource('messages',MessageController::class)->name('index','messages');
 
 });
 
