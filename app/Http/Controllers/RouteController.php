@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class RouteController extends Controller
@@ -16,9 +17,11 @@ class RouteController extends Controller
     }
 
     public function products(){
-        $books = Book::paginate(2);
+        $categories = Category::all();
+        $books = Book::paginate(9);
         return view('User.products',[
-            'books'=>$books
+            'books'=>$books,
+            'catigories'=>$categories,
         ]);
     }
 

@@ -6,8 +6,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
-                        <h4> Yangi Kitoblar </h4>
-                        <h2> More Books </h2>
+                        <h4> Barcha Kitoblar </h4>
+                        <h2> Iqro Books </h2>
                     </div>
                 </div>
             </div>
@@ -22,9 +22,10 @@
                     <div class="filters">
                         <ul>
                             <li class="active" data-filter="*"> Barcha Kitoblar</li>
-                            <li data-filter=".des">Featured</li>
-                            <li data-filter=".dev">Flash Deals</li>
-                            <li data-filter=".gra">Last Minute</li>
+                            @foreach($catigories as $c )
+                            <li data-filter=".{{$c->name}}">{{$c->name}}</li>
+                            @endforeach
+
 
                         </ul>
                     </div>
@@ -36,7 +37,7 @@
 
                             @foreach($books as $book )
 
-                                <div class="col-lg-4 col-md-4 all des">
+                                <div class="col-lg-4 col-md-4 all {{$book->category->name}}">
                                     <div class="product-item">
                                         <a href="#"><img style="width: 100%; height: 250px" src="books/{{$book->image}}" alt=""></a>
                                         <div class="down-content">
