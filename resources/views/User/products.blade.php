@@ -14,6 +14,17 @@
         </div>
     </div>
 
+    <form class="form-inline" style="float: right; padding: 10px;" action="{{route('search')}}" method="post" >
+        @csrf
+
+        <input class="form-control" type="search" name="search" placeholder="Qaysi kitobni qidirayapsiz?..." >
+
+        <div></div>
+
+        <button style="background-color: #009900 margin: 10px;" type="submit" value="search" class="btn btn-success" > Qidir </button>
+
+    </form>
+
 
     <div class="products">
         <div class="container">

@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/',[RouteController::class,'main'])->name('/');
 Route::get('/products',[RouteController::class,'products'])->name('products');
+Route::post('/search',[RouteController::class,'search'])->name('search');
 Route::get('/about',[RouteController::class,'about'])->name('about');
 Route::get('/contact',[RouteController::class,'contact'])->name('contact');
 

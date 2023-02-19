@@ -25,6 +25,23 @@ class RouteController extends Controller
         ]);
     }
 
+    public function search(Request $request){
+
+
+        $data = Book::where('title','like','%'.$request->search.'%')->paginate(9);
+        $categories = Category::all();
+
+        if ($request->search=='')
+        {
+            return redirect()->back();
+        }
+
+        return view('User.products',[
+            'books'=>$data,
+            'catigories'=>$categories,
+        ]);
+    }
+
     public function about(){
         return view('User.about');
     }
