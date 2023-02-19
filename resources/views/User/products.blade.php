@@ -38,8 +38,7 @@
 
                                 <div class="col-lg-4 col-md-4 all des">
                                     <div class="product-item">
-                                        <a href="#"><img style="width: 100%; height: 250px" src="books/{{$book->image}}"
-                                                         alt=""></a>
+                                        <a href="#"><img style="width: 100%; height: 250px" src="books/{{$book->image}}" alt=""></a>
                                         <div class="down-content">
                                             <a href="#"><h4>{{$book->title}}</h4></a>
                                             <h6>{{$book->price}} so'm</h6>
