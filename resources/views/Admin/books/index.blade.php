@@ -7,7 +7,7 @@
 
                 <div class="row">
 
-                    <div class="col-9"><h1 class="card-title">Kitoblar </h1></div>
+                    <div class="col-10"><h1 class="card-title">Kitoblar </h1></div>
                     <div class="col-md-1">
                         <a class="btn btn-primary" href="{{route('admin.books.create')}}">
                             <span class="btn-label">
@@ -60,16 +60,18 @@
                                         <a class="btn btn-warning btn-sm"
                                            href="{{ route('admin.books.edit',$poet->id) }}">
                                             <span class="btn-label">
-                                                <i class="fal fa-pen"></i>
+                                                <i class="fa fa-pen"></i>
                                             </span>
+
                                         </a>
 
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm"><span class="btn-label">
-                                        <i class="fa fa-trash"></i>
-
-                                    </span></button>
+                                        <button type="submit" class="btn btn-danger btn-sm">
+                                            <span class="btn-label">
+                                                <i class="fa fa-trash"></i>
+                                            </span>
+                                        </button>
                                     </form>
 
                                 </td>

@@ -33,7 +33,7 @@
                             <label for=""> Kitob nomi</label>
                             <input type="text" name="title" value="{{old('title')}}" class="form-control">
                             @error('title')
-                                <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
@@ -49,7 +49,7 @@
                             <label for=""> Kategoriyasi </label>
                             <select name="category_id" id="like_to" class="form-control">
                                 @foreach($categories as $c)
-                                <option value="{{$c->id}}">{{$c->name}}</option>
+                                    <option value="{{$c->id}}">{{$c->name}}</option>
                                 @endforeach
                             </select>
                             @error('category_id')
@@ -57,11 +57,11 @@
                             @enderror
                         </div>
 
-                         <div class="form-group ">
+                        <div class="form-group ">
                             <label for=""> Sirti </label>
                             <select name="cover_id" id="like_to" class="form-control">
                                 @foreach($cover as $c)
-                                <option value="{{$c->id}}">{{$c->name}}</option>
+                                    <option value="{{$c->id}}">{{$c->name}}</option>
                                 @endforeach
                             </select>
                             @error('cover_id')
@@ -73,7 +73,7 @@
                             <label class="text text-primary" for="file"> Rasm yuklang</label>
                             <input type="file" id="image" class="form-control" name="image">
                             @error('image')
-                                <span class="text-danger">{{ $message }}</span>
+                            <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
 
@@ -127,17 +127,17 @@
 
 @endsection
 
-@if(session('success'))
+{{--@if(session('success'))--}}
 
-    <script>
-        swal({
-            icon: 'success',
-            text: 'Muvaffaqqiyatli bajarildi',
-            confirmButtonText: 'Continue',
-        })
-    </script>
+{{--    <script>--}}
+{{--        swal({--}}
+{{--            icon: 'success',--}}
+{{--            text: 'Muvaffaqqiyatli bajarildi',--}}
+{{--            confirmButtonText: 'Continue',--}}
+{{--        })--}}
+{{--    </script>--}}
 
-@endif
+{{--@endif--}}
 
 
 
