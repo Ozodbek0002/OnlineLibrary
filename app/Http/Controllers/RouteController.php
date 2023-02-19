@@ -50,4 +50,16 @@ class RouteController extends Controller
         return view('User.contact');
     }
 
+    public function message(Request $request){
+
+        $data = new contact();
+
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->mavzu = $request->mavzu;
+        $data->matn = $request->matn;
+
+        $data->save();
+    }
+
 }
