@@ -54,7 +54,7 @@ class MessageController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
     {
-        //
+
     }
 
     /**
