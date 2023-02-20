@@ -61,6 +61,8 @@ class RouteController extends Controller
         $data->matn = $request->matn;
 
         $data->save();
+
+        return redirect()->back()->with('message', 'Xabar Muvaffaqqiyatli Yuborildi');
     }
 
 }
