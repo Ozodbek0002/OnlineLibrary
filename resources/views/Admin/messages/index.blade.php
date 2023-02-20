@@ -1,7 +1,6 @@
 @extends('Admin.master')
 @section('content')
 
-
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
@@ -15,14 +14,9 @@
                         <thead>
                         <tr>
                             <th class="" scope="col">T/R</th>
-                            <th class="" scope="col"> Mavzusi </th>
-                            <th class="" scope="col"> Muallifi </th>
-                            {{--                            <th class="" scope="col"> Kategoriya</th>--}}
-                            {{--                            <th class="" scope="col"> Muqova</th>--}}
-                            {{--                            <th class="" scope="col"> Narxi</th>--}}
-                            {{--                            <th class="" scope="col"> Kunlik</th>--}}
-                            {{--                            <th class="" scope="col"> Beti</th>--}}
-                            <th class="" scope="col"> Holat </th>
+                            <th class="" scope="col"> Mavzusi</th>
+                            <th class="" scope="col"> Muallifi</th>
+                            <th class="" scope="col"> Holat</th>
                             <th class="" scope="col">Amallar</th>
                         </tr>
                         </thead>
@@ -30,24 +24,29 @@
 
                         @foreach($messages as $ind=>$poet)
                             <tr>
-                                <td class="col-1">{{($books->currentpage()-1)*($books->perpage())+$ind+1}}</td>
-                                <td>{!! $poet->title  !!}</td>
-                                <td>{!! $poet->author !!}</td>
-                                {{--                                <td>{!! $poet->category->name !!}</td>--}}
-                                {{--                                <td>{!! $poet->cover->name !!}</td>--}}
-                                {{--                                <td>{!! $poet->price !!}</td>--}}
-                                {{--                                <td>{!! $poet->price_daily !!}</td>--}}
-                                {{--                                <td>{!! $poet->page !!}</td>--}}
-                                <td>{!! $poet->count !!}</td>
-                                <td>{!! $poet->sell_count !!}</td>
+                                <td class="col-1">{{($messages->currentpage()-1)*($messages->perpage())+$ind+1}}</td>
+                                <td>{!! $poet->mavzu  !!}</td>
+                                <td>{!! $poet->name !!}</td>
+                                <td>
+                                    @if($poet->status=='new')
+                                        <button class="btn btn-success">
+                                            Yangi
+                                        </button>
+                                    @else
+                                        <button class="btn btn-primary">
+                                            O`qilgan
+                                        </button>
+
+                                    @endif
+                                </td>
                                 <td class="col-2">
-                                    <form action="{{ route('admin.books.destroy',$poet->id) }}" method="POST"
+                                    <form action="{{ route('admin.messages.destroy',$poet->id) }}" method="POST"
                                           onSubmit="return confirm('Rostan ham o`chirilishini hohlaysizmi?');">
 
-                                        <a class="btn btn-warning btn-sm"
-                                           href="{{ route('admin.books.edit',$poet->id) }}">
+                                        <a class="btn btn-primary btn-sm"
+                                           href="{{ route('admin.messages.show',$poet->id) }}">
                                             <span class="btn-label">
-                                                <i class="fa fa-pen"></i>
+                                                <i class="fa fa-eye"></i>
                                             </span>
 
                                         </a>
@@ -72,9 +71,9 @@
                     <div class="container">
                         <div class="row justify-content-center">
 
-                            @if ($books->links())
+                            @if ($messages->links())
                                 <div class="mt-4 p-4 box has-text-centered">
-                                    {{ $books->links() }}
+                                    {{ $messages->links() }}
                                 </div>
                             @endif
 
@@ -87,8 +86,6 @@
             </div>
         </div>
     </div>
-
-
 
 @endsection
 
