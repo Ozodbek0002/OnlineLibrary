@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Category;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class RouteController extends Controller
@@ -52,7 +53,7 @@ class RouteController extends Controller
 
     public function message(Request $request){
 
-        $data = new contact();
+        $data = new Message();
 
         $data->name = $request->name;
         $data->email = $request->email;
