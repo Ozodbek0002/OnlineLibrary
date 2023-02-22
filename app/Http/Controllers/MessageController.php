@@ -58,8 +58,8 @@ class MessageController extends Controller
         $message = Message::where('id',$id)->first();
         if ($message != null) {
             $message->delete();
-            return redirect()->route('admin.messages.index')->with('success','Xabar muvaffaqiyatli o`chirildi.');
+            return redirect()->route('admin.messages')->with('success','Xabar muvaffaqiyatli o`chirildi.');
         }
-       return redirect()->route('admin.messages.index')->with('success','Xabar muvaffaqiyatli o`chirildi.');
+       return redirect()->route('admin.messages')->with('success','Xabar muvaffaqiyatli o`chirildi.');
     }
 }
