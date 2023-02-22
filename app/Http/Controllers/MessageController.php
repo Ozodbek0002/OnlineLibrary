@@ -35,6 +35,9 @@ class MessageController extends Controller
     public function show(string $id): Response
     {
         $message = Message::find($id);
+        $message->status = 'readed';
+        $message->save();
+
         return response(view('admin.messages.show',[
             'message'=>$message
         ]));
