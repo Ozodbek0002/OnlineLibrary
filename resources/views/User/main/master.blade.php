@@ -64,6 +64,47 @@
     }
 </script>
 
+<script>
+    let errors = @json($errors->all());
+    @if($errors->any())
+    let msg = '';
+    for (let i = 0; i < errors.length; i++) {
+        msg += (i + 1) + '-xatolik ' + errors[i] + '\n';
+    }
+    Swal.fire({
+        icon: 'error',
+        title: 'Xatolik',
+        text: msg,
+    });
+    @endif
+    @if(session('msg'))
+    Swal.fire({
+        icon: 'success',
+        title: 'Muvaffaqiyatli',
+        text: '{{ session('msg') }}',
+    });
+
+
+    @endif
+    $('.show_confirm').click(function (event) {
+        var form = $(this).closest("form");
+        var name = $(this).data("name");
+        event.preventDefault();
+        swal({
+            title: `Haqiqatan ham bu yozuvni oʻchirib tashlamoqchimisiz?`,
+            text: "Agar siz buni o'chirib tashlasangiz, u abadiy yo'qoladi.",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            buttons: ['Yo`q', 'Ha']
+        }).then((willDelete) => {
+            if (willDelete) {
+                form.submit();
+            }
+        });
+    });
+</script>
+
 
 </body>
 

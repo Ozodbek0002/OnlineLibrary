@@ -62,7 +62,7 @@ class RouteController extends Controller
 
         $data->save();
 
-        return redirect()->route('contact')->with('success', 'Xabar Muvaffaqqiyatli Yuborildi');
+        return redirect()->route('contact')->with('msg', 'Xabar Muvaffaqqiyatli Yuborildi');
     }
 
 }
