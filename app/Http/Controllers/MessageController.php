@@ -12,7 +12,7 @@ class MessageController extends Controller
 
     public function index(): Response
     {
-        $messages = Message::latest()->paginate(6);
+        $messages = Message::latest()->paginate(5);
         return response(view('admin.messages.index',[
             'messages'=>$messages
         ]));
@@ -34,7 +34,10 @@ class MessageController extends Controller
 
     public function show(string $id): Response
     {
-        //
+        $message = Message::find($id);
+        return response(view('admin.messages.show',[
+            'message'=>$message
+        ]));
     }
 
 
@@ -52,6 +55,11 @@ class MessageController extends Controller
 
     public function destroy(string $id): RedirectResponse
     {
-        //
+        $message = Message::where('id',$id)->first();
+        if ($message != null) {
+            $message->delete();
+            return redirect()->route('admin.messages.index')->with('success','Xabar muvaffaqiyatli o`chirildi.');
+        }
+       return redirect()->route('admin.messages.index')->with('success','Xabar muvaffaqiyatli o`chirildi.');
     }
 }
