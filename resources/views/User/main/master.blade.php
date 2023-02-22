@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="{{asset('user/assets/css/templatemo-sixteen.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/owl.css')}}">
 
+    {{--    Alert--}}
+    <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>

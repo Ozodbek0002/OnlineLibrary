@@ -107,7 +107,7 @@
     </div>
 
 @endsection
-@if(session()->has('message'))
+@if(session()->has('success'))
 
     <script>
         swal({

@@ -39,9 +39,9 @@
                                     @endif
                                 </td>
                                 <td class="col-2">
-                                    <form action="{{ route('admin.messages.destroy',$poet->id) }}" method="POST"
-                                          onSubmit="return confirm('Rostan ham o`chirilishini hohlaysizmi?');">
-
+                                    <form  action="{{ route('admin.messages.destroy',$poet->id) }}" method="POST"
+                                          {{--                                          onSubmit="return confirm('Rostan ham o`chirilishini hohlaysizmi?')">--}}
+                                           >
                                         <a class="btn btn-primary btn-sm"
                                            href="{{ route('admin.messages.show',$poet->id) }}">
                                             <span class="btn-label">
@@ -52,11 +52,12 @@
 
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">
+                                        <button id="show_confirm" type="submit" class="btn btn-danger btn-sm">
                                             <span class="btn-label">
                                                 <i class="fa fa-trash"></i>
                                             </span>
                                         </button>
+
                                     </form>
 
                                 </td>
@@ -88,14 +89,13 @@
 
 @endsection
 
-@if(session('success'))
+@section('script')
 
-    <script>
-        swal({
-            icon: 'success',
-            text: 'Muvaffaqqiyatli bajarildi',
-            confirmButtonText: 'Continue',
-        })
-    </script>
 
-@endif
+
+@endsection
+
+
+
+
+
