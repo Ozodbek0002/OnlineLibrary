@@ -107,16 +107,6 @@
     </div>
 
 @endsection
-@if(session()->has('success'))
 
-    <script>
-        swal({
-            icon: 'success',
-            text: 'Muvaffaqqiyatli bajarildi',
-            confirmButtonText: 'Continue',
-        })
-    </script>
-
-@endif
 
 

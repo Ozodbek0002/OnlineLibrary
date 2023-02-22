@@ -40,8 +40,7 @@
                                 </td>
                                 <td class="col-2">
                                     <form  action="{{ route('admin.messages.destroy',$poet->id) }}" method="POST"
-                                          {{--                                          onSubmit="return confirm('Rostan ham o`chirilishini hohlaysizmi?')">--}}
-                                           >
+                                           onSubmit="return confirm('Rostan ham o`chirilishini hohlaysizmi?')">
                                         <a class="btn btn-primary btn-sm"
                                            href="{{ route('admin.messages.show',$poet->id) }}">
                                             <span class="btn-label">

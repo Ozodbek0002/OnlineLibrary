@@ -131,6 +131,6 @@ class BookController extends Controller
     public function destroy(Book $book): RedirectResponse
     {
         $book->delete();
-        return redirect()->route('admin.books');
+        return redirect()->route('admin.books')->with('msg','Kitob muvaffaqiyatli o`chirildi.');
     }
 }
