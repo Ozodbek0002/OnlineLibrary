@@ -33,10 +33,9 @@
                                             Yangi
                                         </button>
                                     @else
-                                        <button class="btn btn-primary">
+                                        <button class="btn btn-danger">
                                             O`qilgan
                                         </button>
-
                                     @endif
                                 </td>
                                 <td class="col-2">
