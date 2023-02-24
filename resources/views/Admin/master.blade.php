@@ -163,15 +163,15 @@
         text: msg,
     });
     @endif
+
     @if(session('msg'))
     Swal.fire({
         icon: 'success',
         title: 'Muvaffaqiyatli',
         text: '{{ session('msg') }}',
     });
-
-
     @endif
+        
     $('.show_confirm').click(function (event) {
         var form = $(this).closest("form");
         var name = $(this).data("name");
@@ -191,6 +191,7 @@
     });
 
 </script>
+
 
 </body>
 </html>
