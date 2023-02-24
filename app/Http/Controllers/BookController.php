@@ -133,4 +133,5 @@ class BookController extends Controller
         $book->delete();
         return redirect()->route('admin.books')->with('msg','Kitob muvaffaqiyatli o`chirildi.');
     }
+
 }
