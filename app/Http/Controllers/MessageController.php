@@ -65,4 +65,5 @@ class MessageController extends Controller
         }
        return redirect()->route('admin.messages')->with('msg','Xabar muvaffaqiyatli o`chirildi.');
     }
+
 }
