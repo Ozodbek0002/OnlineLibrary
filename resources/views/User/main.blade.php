@@ -56,13 +56,9 @@
                                 </ul>
                                 <span>Sotildi ({{$book->sell_count}})</span>
                             </div>
-                            <div class="down-content d-flex justify-content-around">
-                                <div>
-                                    <a href="{{route('product',$book->id)}}" type="button" class="btn btn-outline-success"> Sotib olish </a>
-                                </div>
-                                <div>
-                                    <a href="{{route('rent',$book->id)}}" type="button" class="btn btn-outline-warning"> Ijaraga olish </a>
-                                </div>
+                            <div class="d-flex justify-content-center">
+                                <a style="margin: 10px;" href="{{route('product',$book->id)}}" type="button"
+                                   class="btn btn-outline-success"> Ko`rish </a>
                             </div>
                         </div>
                     </div>

@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="right-image">
-                        <img src="{{asset('user/assets/images/feature-image.jpg')}}" alt="">
+                        <img style="width: 100%; height: 250px" src="books/{{$book->image}}" alt="">
                     </div>
                 </div>
             </div>
