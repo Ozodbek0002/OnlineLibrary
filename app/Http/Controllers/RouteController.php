@@ -82,4 +82,8 @@ class RouteController extends Controller
         ]);
     }
 
+    public function order($id){
+        dd($id);
+    }
+
 }
