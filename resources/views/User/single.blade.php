@@ -23,12 +23,21 @@
                 </div>
                 <div class="col-md-6">
                     <div class="left-content">
-                        <p>Muallif: <b style="font-size: 20px;">{{$book->author}}</b> </p>
-                        <p>Jild: <b style="font-size: 20px;">{{$book->cover->name}}</b> </p>
-                        <p>Varaq: <b style="font-size: 20px;">{{$book->page}}</b> </p>
-                        <p>Muallif: <b style="font-size: 20px;">{{$book->author}}</b> </p>
+                        <p>Muallif:  <b style="font-size: 20px;">{{$book->author}}</b> </p>
+                        <p>Jild:  <b style="font-size: 20px;">{{$book->cover->name}}</b> </p>
+                        <p>Varaq:  <b style="font-size: 20px;">{{$book->page}}</b>  bet</p>
+                        <p>Narxi:  <b style="font-size: 20px;">{{$book->price}}</b>  so`m</p>
+                        <p>Ijara narxi (kun):  <b style="font-size: 20px;">{{$book->price_daily}}</b>  so`m</p>
 
-                        <a href="about.html" class="filled-button">Read More</a>
+
+                    </div>
+                    <div class="down-content d-flex justify-content-around">
+                        <div>
+                            <a href="{{route('product',$book->id)}}" type="button" class="btn btn-success"> Sotib olish </a>
+                        </div>
+                        <div>
+                            <a href="{{route('rent',$book->id)}}" type="button" class="btn btn-warning"> Ijaraga olish </a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
