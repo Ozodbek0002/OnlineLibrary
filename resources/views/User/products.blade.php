@@ -21,7 +21,7 @@
 
         <div></div>
 
-        <button style="background-color: #009900 margin: 10px;" type="submit" value="search" class="btn btn-success" > Qidir </button>
+        <button style="background-color: #009900; margin: 10px;" type="submit" value="search" class="btn btn-success" > Qidir </button>
 
     </form>
 

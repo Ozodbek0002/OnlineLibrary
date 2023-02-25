@@ -15,11 +15,11 @@ class CoverSeeder extends Seeder
     {
 
         $cover = Cover::create([
-            'name' => 'Soft',
+            'name' => 'Yumshoq',
         ]);
 
         $cover = Cover::create([
-            'name' => 'Hard',
+            'name' => 'Qattiq',
         ]);
     }
 }
