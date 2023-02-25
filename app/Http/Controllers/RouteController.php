@@ -69,6 +69,7 @@ class RouteController extends Controller
     public function product($id){
        $book = Book::find($id);
         return view('User.single',[
+            'busy_id'=>1,
             'book'=>$book
         ]);
     }
@@ -76,6 +77,7 @@ class RouteController extends Controller
     public function rent($id){
         $book = Book::find($id);
         return view('User.single',[
+            'busy_id'=>2,
             'book'=>$book
         ]);
     }
