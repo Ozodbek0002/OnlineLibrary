@@ -14,14 +14,16 @@
         </div>
     </div>
 
-    <form class="form-inline" style="float: right; padding: 10px;" action="{{route('search')}}" method="post" >
+    <form class="form-inline" style="float: right; padding: 10px;" action="{{route('search')}}" method="post">
         @csrf
 
-        <input class="form-control" type="search" name="search" placeholder="Qaysi kitobni qidirayapsiz?..." >
+        <input class="form-control" type="search" name="search" placeholder="Qaysi kitobni qidirayapsiz?...">
 
         <div></div>
 
-        <button style="background-color: #009900; margin: 10px;" type="submit" value="search" class="btn btn-success" > Qidir </button>
+        <button style="background-color: #009900; margin: 10px;" type="submit" value="search" class="btn btn-success">
+            Qidir
+        </button>
 
     </form>
 
@@ -34,7 +36,7 @@
                         <ul>
                             <li class="active" data-filter="*"> Barcha Kitoblar</li>
                             @foreach($catigories as $c )
-                            <li data-filter=".{{$c->name}}">{{$c->name}}</li>
+                                <li data-filter=".{{$c->name}}">{{$c->name}}</li>
                             @endforeach
 
                         </ul>
@@ -49,7 +51,8 @@
 
                                 <div class="col-lg-4 col-md-4 all {{$book->category->name}}">
                                     <div class="product-item">
-                                        <a href="#"><img style="width: 100%; height: 250px" src="books/{{$book->image}}" alt=""></a>
+                                        <a href="#"><img style="width: 100%; height: 250px" src="books/{{$book->image}}"
+                                                         alt=""></a>
                                         <div class="down-content">
                                             <a href="#"><h4>{{$book->title}}</h4></a>
                                             <h6>{{$book->price}} so'm</h6>
@@ -62,25 +65,21 @@
                                                 <li><i class="fa fa-star"></i></li>
                                             </ul>
                                             <span>Sotildi ({{$book->sell_count}})</span>
+
                                         </div>
-                                        <div class="down-content d-flex justify-content-around">
-                                            <div>
-                                                <a href="{{route('product',$book->id)}}" type="button" class="btn btn-outline-success"> Sotib olish </a>
-                                            </div>
-                                            <div>
-                                                <a href="{{route('rent',$book->id)}}" type="button" class="btn btn-outline-warning"> Ijaraga olish </a>
-                                            </div>
+                                        <div class="d-flex justify-content-center">
+                                            <a style="margin: 10px;" href="{{route('product',$book->id)}}" type="button"
+                                               class="btn btn-outline-success"> Ko`rish </a>
                                         </div>
+
                                     </div>
                                 </div>
                             @endforeach
 
 
-
                         </div>
                     </div>
                 </div>
-
 
 
                 <div class="container">
@@ -94,8 +93,6 @@
 
                     </div>
                 </div>
-
-
 
 
             </div>

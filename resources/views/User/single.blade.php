@@ -1,5 +1,6 @@
 @extends('User.main.master')
 @section('content')
+
     <div class="page-heading products-heading header-text">
         <div class="container">
             <div class="row">
@@ -33,7 +34,7 @@
                     </div>
                     <div class="down-content d-flex justify-content-around">
                         <div>
-                            <a href="{{route('product',$book->id)}}" type="button" class="btn btn-success"> Sotib olish </a>
+                            <a href="{{route('sell',$book->id)}}" type="button" class="btn btn-success"> Sotib olish </a>
                         </div>
                         <div>
                             <a href="{{route('rent',$book->id)}}" type="button" class="btn btn-warning"> Ijaraga olish </a>
