@@ -65,10 +65,10 @@
                                         </div>
                                         <div class="down-content d-flex justify-content-around">
                                             <div>
-                                                <a href="{{route('buy',$book->id)}}" type="button" class="btn btn-outline-success"> Sotib olish </a>
+                                                <a href="{{route('product',$book->id)}}" type="button" class="btn btn-outline-success"> Sotib olish </a>
                                             </div>
                                             <div>
-                                                <a href="" type="button" class="btn btn-outline-warning"> Ijaraga olish </a>
+                                                <a href="{{route('rent',$book->id)}}" type="button" class="btn btn-outline-warning"> Ijaraga olish </a>
                                             </div>
                                         </div>
                                     </div>

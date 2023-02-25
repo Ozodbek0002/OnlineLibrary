@@ -36,5 +36,7 @@ Route::post('/search',[RouteController::class,'search'])->name('search');
 Route::get('/about',[RouteController::class,'about'])->name('about');
 Route::get('/contact',[RouteController::class,'contact'])->name('contact');
 Route::post('/message',[RouteController::class,'message'])->name('message');
+Route::get('/product/{id}',[RouteController::class,'product'])->name('product');
+Route::get('/rent/{id}',[RouteController::class,'rent'])->name('rent');
 
 require __DIR__.'/auth.php';

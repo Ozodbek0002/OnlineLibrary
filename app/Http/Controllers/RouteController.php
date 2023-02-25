@@ -65,4 +65,19 @@ class RouteController extends Controller
         return redirect()->route('contact')->with('message', 'Xabar Muvaffaqqiyatli Yuborildi');
     }
 
+
+    public function product($id){
+       $book = Book::find($id);
+        return view('User.single',[
+            'book'=>$book
+        ]);
+    }
+
+    public function rent($id){
+        $book = Book::find($id);
+        return view('User.single',[
+            'book'=>$book
+        ]);
+    }
+
 }
