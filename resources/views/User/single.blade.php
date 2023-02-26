@@ -57,18 +57,18 @@
             <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span id="close1" class="close">&times;</span>
                     <div class="card">
 
                         <div class="card-header">
                             <div class="row">
                                 <div class="col-lg-12 margin-tb">
                                     <div class="pull-right">
-                                        <h2> Qo'shish </h2>
+                                        <h2> Ma'lumotlaringizni yozing </h2>
                                     </div>
-                                    <div class="pull-left">
-                                        <a class="btn btn-primary" href="#"> Orqaga </a>
-                                    </div>
+{{--                                    <div class="pull-left">--}}
+{{--                                        <a class="btn btn-primary" href="#"> Orqaga </a>--}}
+{{--                                    </div>--}}
                                 </div>
                             </div>
                         </div>
@@ -84,6 +84,25 @@
                                             <input type="text" name="size" class="form-control mb-3" placeholder="Size">
                                         </div>
                                     </div>
+                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <strong>Kitob:</strong>
+                                            <input type="text" name="size" class="form-control mb-3" placeholder="Size">
+                                        </div>
+                                    </div>
+                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <strong>Kitob:</strong>
+                                            <input type="text" name="size" class="form-control mb-3" placeholder="Size">
+                                        </div>
+                                    </div>
+                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <strong>Kitob:</strong>
+                                            <input type="text" name="size" class="form-control mb-3" placeholder="Size">
+                                        </div>
+                                    </div>
+
 
 
                                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
@@ -116,15 +135,13 @@
 
         var btn = document.getElementById("myBtn");
 
-        var span = document.getElementsByClassName("close");
+        var span = document.getElementById("close1");
 
 
         // When the user clicks the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
-            console.log('hello')
         }
-
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
