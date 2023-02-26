@@ -81,25 +81,31 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <strong>Kitob:</strong>
-                                            <input type="text" name="size" class="form-control mb-3" placeholder="Size">
+                                            <h2>{{$book->title}}</h2>
                                         </div>
                                     </div>
+
+                                    <input type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
+
+
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <strong>Kitob:</strong>
-                                            <input type="text" name="size" class="form-control mb-3" placeholder="Size">
+                                            <strong>Soni:</strong>
+                                            <input type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
                                         </div>
                                     </div>
+
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <strong>Kitob:</strong>
-                                            <input type="text" name="size" class="form-control mb-3" placeholder="Size">
+                                            <strong>Ismingiz:</strong>
+                                            <input type="text" name="user_name" class="form-control mb-3" placeholder="Ismingizni yozing" required>
                                         </div>
                                     </div>
+
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <strong>Kitob:</strong>
-                                            <input type="text" name="size" class="form-control mb-3" placeholder="Size">
+                                            <strong>Telefon raqamingiz:</strong>
+                                            <input type="text" name="phone" class="form-control mb-3" placeholder="Telfon raqamingizni yozing" required>
                                         </div>
                                     </div>
 
