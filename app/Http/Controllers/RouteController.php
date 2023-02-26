@@ -79,8 +79,8 @@ class RouteController extends Controller
     public function order(Request $request){
         $order  = new Order();
         $book = Book::find($request->book_id);
-        if ($book->count <= $request->count){
-            return redirect()->back()->with('error', 'Siz so\'ragan miqdorda kitob mavjud emas');
+        if ($book->count <= $request->count || $book->count == 0){
+            return redirect()->back()->with('error','Siz so\'ragan miqdorda kitob mavjud emas');
         }
         $order->book_id = $request->book_id;
         $order->user_name = $request->user_name;
@@ -90,7 +90,7 @@ class RouteController extends Controller
 
         $order->save();
 
-        return redirect()->back()->with('msg', 'Buyurtma Muvaffaqqiyatli Yuborildi');
+        return redirect()->back()->with('message', 'Buyurtma Muvaffaqqiyatli Yuborildi');
     }
 
 }

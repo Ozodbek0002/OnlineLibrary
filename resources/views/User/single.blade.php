@@ -3,6 +3,16 @@
 
     <div class="page-heading products-heading header-text">
         <div class="container">
+            @if(session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session()->get('message') }}
+                </div>
+            @endif
+                @if(session()->has('error'))
+                <div class="alert alert-danger">
+                    {{ session()->get('error') }}
+                </div>
+            @endif
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
@@ -29,6 +39,7 @@
                         <p>Varaq:  <b style="font-size: 20px;">{{$book->page}}</b>  bet</p>
                         <p>Narxi:  <b style="font-size: 20px;">{{$book->price}}</b>  so`m</p>
                         <p>Ijara narxi (kun):  <b style="font-size: 20px;">{{$book->price_daily}}</b>  so`m</p>
+                        <p>Bizda bor:  <b style="font-size: 20px;">{{$book->count}}</b>  ta </p>
 
 
                     </div>
@@ -89,7 +100,7 @@
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Soni:</b>
-                                            <input type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
+                                            <input min="1" max="{{$book->count}}" type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
                                         </div>
                                     </div>
 
@@ -161,7 +172,7 @@
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Soni:</b>
-                                            <input type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
+                                            <input min="1" max="{{$book->count}}"  type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
                                         </div>
                                     </div>
 
@@ -194,7 +205,6 @@
 
         </div>
     </div>
-
 
 
 
