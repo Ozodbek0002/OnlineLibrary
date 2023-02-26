@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $fillable = [
+        'book_id',
         'user_name',
         'phone',
-        'book_id',
         'busy_id',
         'count',
     ];

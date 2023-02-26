@@ -71,7 +71,7 @@
                         </div>
                         <div class="card-body">
 
-                            <form action="{{route('order',$book->id)}}" method="post">
+                            <form action="{{route('order')}}" method="post">
                                 @csrf
                                 <div class="row">
 
@@ -83,6 +83,8 @@
                                     </div>
 
                                     <input type="hidden" name="busy_id" class="form-control mb-3" value="2">
+                                    <input type="hidden" name="book_id" class="form-control mb-3" value="{{$book->id}}">
+
 
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
@@ -142,7 +144,7 @@
                         </div>
                         <div class="card-body">
 
-                            <form action="{{route('order',$book->id)}}" method="post">
+                            <form action="{{route('order')}}" method="post">
                                 @csrf
                                 <div class="row">
 
@@ -153,7 +155,8 @@
                                         </div>
                                     </div>
 
-                                    <input type="hidden" name="busy_id" class="form-control mb-3" value="3">
+                                    <input type="hidden" name="busy_id" class="form-control mb-3" value="1">
+                                    <input type="hidden" name="book_id" class="form-control mb-3" value="{{$book->id}}">
 
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">

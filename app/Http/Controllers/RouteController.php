@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Category;
 use App\Models\Message;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class RouteController extends Controller
@@ -62,7 +63,7 @@ class RouteController extends Controller
 
         $data->save();
 
-        return redirect()->route('contact')->with('message', 'Xabar Muvaffaqqiyatli Yuborildi');
+        return redirect()->route('contact')->with('msg', 'Xabar Muvaffaqqiyatli Yuborildi');
     }
 
 
@@ -74,16 +75,22 @@ class RouteController extends Controller
         ]);
     }
 
-    public function rent($id){
-        $book = Book::find($id);
-        return view('User.single',[
-            'busy_id'=>2,
-            'book'=>$book
-        ]);
-    }
 
-    public function order($id){
-        dd($id);
+    public function order(Request $request){
+        $order  = new Order();
+        $book = Book::find($request->book_id);
+        if ($book->count <= $request->count){
+            return redirect()->back()->with('error', 'Siz so\'ragan miqdorda kitob mavjud emas');
+        }
+        $order->book_id = $request->book_id;
+        $order->user_name = $request->user_name;
+        $order->phone = $request->phone;
+        $order->busy_id = $request->busy_id;
+        $order->count = $request->count;
+
+        $order->save();
+
+        return redirect()->back()->with('msg', 'Buyurtma Muvaffaqqiyatli Yuborildi');
     }
 
 }
