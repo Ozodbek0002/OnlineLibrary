@@ -37,7 +37,7 @@
                             <button  id="myBtn" type="button" class="btn btn-success"> Sotib olish </button>
                         </div>
                         <div>
-                            <a href="#"  type="button" class="btn btn-warning"> Ijaraga olish </a>
+                            <button id="myBtn1" type="button" class="btn btn-warning"> Ijaraga olish </button>
                         </div>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
             <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span id="close1" class="close">&times;</span>
+                    <span id="close" class="close">&times;</span>
                     <div class="card">
 
                         <div class="card-header">
@@ -66,9 +66,6 @@
                                     <div class="pull-right">
                                         <h2> Ma'lumotlaringizni yozib qoldiring </h2>
                                     </div>
-{{--                                    <div class="pull-left">--}}
-{{--                                        <a class="btn btn-primary" href="#"> Orqaga </a>--}}
-{{--                                    </div>--}}
                                 </div>
                             </div>
                         </div>
@@ -103,7 +100,7 @@
 
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <b style="color: red;">Telefon raqamingiz:</b>
+                                            <b style="color: red;">Telefon raqamingiz: ( 90 123 45 67  )</b>
                                             <input type="text" name="phone" class="form-control mb-3" placeholder="Telfon raqamingizni yozing" required>
                                         </div>
                                     </div>
@@ -113,6 +110,7 @@
                                     </div>
                                 </div>
                             </form>
+
                         </div>
 
                     </div>
@@ -121,9 +119,79 @@
             <!-- The Modal -->
 
         </div>
-
-
     </div>
+
+
+    <div class="col-md-12">
+        <div class="form">
+
+            <div id="myModal1" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span id="close1" class="close">&times;</span>
+                    <div class="card">
+
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-lg-12 margin-tb">
+                                    <div class="pull-right">
+                                        <h2> Ma'lumotlaringizni yozib qoldiring </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                            <form action="{{route('order',$book->id)}}" method="post">
+                                @csrf
+                                <div class="row">
+
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <b style="color: red;">Kitob:</b>
+                                            <strong >{{$book->title}} </strong>
+                                        </div>
+                                    </div>
+
+                                    <input type="hidden" name="busy_id" class="form-control mb-3" value="3">
+
+                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <b style="color: red;">Soni:</b>
+                                            <input type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
+                                        </div>
+                                    </div>
+
+                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <b style="color: red;">Ismingiz:</b>
+                                            <input type="text" name="user_name" class="form-control mb-3" placeholder="Ismingizni yozing" required>
+                                        </div>
+                                    </div>
+
+                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                        <div class="form-group">
+                                            <b style="color: red;">Telefon raqamingiz: ( 90 123 45 67  )</b>
+                                            <input type="text" name="phone" class="form-control mb-3" placeholder="Telfon raqamingizni yozing" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                                        <button type="submit" class="btn btn-primary">Saqlash</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- The Modal -->
+
+        </div>
+    </div>
+
 
 
 
@@ -135,20 +203,29 @@
 
 
         var modal = document.getElementById("myModal");
+        var modal1 = document.getElementById("myModal1");
 
         var btn = document.getElementById("myBtn");
+        var btn1 = document.getElementById("myBtn1");
 
-        var span = document.getElementById("close1");
+        var span = document.getElementById("close");
+        var span1 = document.getElementById("close1");
 
 
         // When the user clicks the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
         }
+        btn1.onclick = function () {
+            modal1.style.display = "block";
+        }
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
             modal.style.display = "none";
+        }
+        span1.onclick = function () {
+            modal1.style.display = "none";
         }
 
 
