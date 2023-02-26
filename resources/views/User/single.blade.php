@@ -64,7 +64,7 @@
                             <div class="row">
                                 <div class="col-lg-12 margin-tb">
                                     <div class="pull-right">
-                                        <h2> Ma'lumotlaringizni yozing </h2>
+                                        <h2> Ma'lumotlaringizni yozib qoldiring </h2>
                                     </div>
 {{--                                    <div class="pull-left">--}}
 {{--                                        <a class="btn btn-primary" href="#"> Orqaga </a>--}}
@@ -80,36 +80,33 @@
 
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <strong>Kitob:</strong>
-                                            <h2>{{$book->title}}</h2>
+                                            <b style="color: red;">Kitob:</b>
+                                            <strong >{{$book->title}} </strong>
                                         </div>
                                     </div>
 
-                                    <input type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
-
+                                    <input type="hidden" name="busy_id" class="form-control mb-3" value="2">
 
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <strong>Soni:</strong>
+                                            <b style="color: red;">Soni:</b>
                                             <input type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
                                         </div>
                                     </div>
 
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <strong>Ismingiz:</strong>
+                                            <b style="color: red;">Ismingiz:</b>
                                             <input type="text" name="user_name" class="form-control mb-3" placeholder="Ismingizni yozing" required>
                                         </div>
                                     </div>
 
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <strong>Telefon raqamingiz:</strong>
+                                            <b style="color: red;">Telefon raqamingiz:</b>
                                             <input type="text" name="phone" class="form-control mb-3" placeholder="Telfon raqamingizni yozing" required>
                                         </div>
                                     </div>
-
-
 
                                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                                         <button type="submit" class="btn btn-primary">Saqlash</button>
