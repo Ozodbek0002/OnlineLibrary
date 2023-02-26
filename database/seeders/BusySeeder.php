@@ -15,11 +15,11 @@ class BusySeeder extends Seeder
     {
 
         $busy = Busy::create([
-            'name' => 'Reading',
+            'name' => 'O`qilmoqda',
         ]);
 
         $busy = Busy::create([
-            'name' => 'Sell',
+            'name' => 'Sotildi',
         ]);
     }
 }
