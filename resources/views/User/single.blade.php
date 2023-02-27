@@ -3,16 +3,6 @@
 
     <div class="page-heading products-heading header-text">
         <div class="container">
-            @if(session()->has('message'))
-                <div class="alert alert-success">
-                    {{ session()->get('message') }}
-                </div>
-            @endif
-                @if(session()->has('error'))
-                <div class="alert alert-danger">
-                    {{ session()->get('error') }}
-                </div>
-            @endif
             <div class="row">
                 <div class="col-md-12">
                     <div class="text-content">
@@ -100,7 +90,7 @@
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Soni:</b>
-                                            <input min="1" max="{{$book->count}}" type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
+                                            <input min="1" type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
                                         </div>
                                     </div>
 
@@ -172,7 +162,7 @@
                                      <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Soni:</b>
-                                            <input min="1" max="{{$book->count}}"  type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
+                                            <input min="1"  type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
                                         </div>
                                     </div>
 

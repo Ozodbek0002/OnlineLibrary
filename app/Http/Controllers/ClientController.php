@@ -6,18 +6,19 @@ use App\Models\Order;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\View\View;
 
 class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index(): View
     {
         $books = Order::latest()->paginate(5);
-        return response(view('admin.orders.index', [
+        return view('admin.orders.index', [
             'books'=>$books
-        ]));
+        ]);
     }
 
     /**
