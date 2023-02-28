@@ -14,11 +14,6 @@
 
                 <div class="card-body">
 
-{{--                    @if(session()->has('message'))--}}
-{{--                        <div class="alert alert-success">--}}
-{{--                            {{ session()->get('message') }}--}}
-{{--                        </div>--}}
-{{--                    @endif--}}
 
 
                     <form action="{{route('admin.books.store')}}" method="POST" accept-charset="UTF-8" enctype="multipart/form-data">
@@ -34,7 +29,7 @@
 
                         <div class="form-group ">
                             <label for="author">Muallif nomi</label>
-                            <input type="text" id="author" class="form-control" name="author">
+                            <input type="text" value="{{old('author')}}" id="author" class="form-control" name="author">
                             @error('author')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -42,7 +37,7 @@
 
                         <div class="form-group ">
                             <label for=""> Kategoriyasi </label>
-                            <select name="category_id" id="like_to" class="form-control">
+                            <select name="category_id"  value="{{old('category_id')}}" class="form-control">
                                 @foreach($categories as $c)
                                 <option value="{{$c->id}}">{{$c->name}}</option>
                                 @endforeach
@@ -54,7 +49,7 @@
 
                          <div class="form-group ">
                             <label for=""> Sirti </label>
-                            <select name="cover_id" id="like_to" class="form-control">
+                            <select name="cover_id"  value="{{old('cover_id')}}" class="form-control">
                                 @foreach($cover as $c)
                                 <option value="{{$c->id}}">{{$c->name}}</option>
                                 @endforeach
@@ -66,7 +61,7 @@
 
                         <div class="form-group ">
                             <label class="text text-primary" for="file"> Rasm yuklang</label>
-                            <input type="file" id="image" class="form-control" name="image">
+                            <input type="file" value="{{old('image')}}" id="image" class="form-control" name="image">
                             @error('image')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -74,7 +69,7 @@
 
                         <div class="form-group ">
                             <label for="author">Narxi</label>
-                            <input type="number" id="author" class="form-control" name="price">
+                            <input type="number" value="{{old('price')}}"  class="form-control" name="price">
                             @error('price')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -82,7 +77,7 @@
 
                         <div class="form-group ">
                             <label for="author">Kunlik narxi</label>
-                            <input type="number" id="author" class="form-control" name="price_daily">
+                            <input type="number" value="{{old('price_daily')}}"class="form-control" name="price_daily">
                             @error('price_daily')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -90,7 +85,7 @@
 
                         <div class="form-group ">
                             <label for="author">Sahifasi</label>
-                            <input type="number" id="author" class="form-control" name="page">
+                            <input type="number" value="{{old('page')}}"  class="form-control" name="page">
                             @error('page')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -98,7 +93,7 @@
 
                         <div class="form-group ">
                             <label for="author">Soni</label>
-                            <input type="number" id="author" class="form-control" name="count">
+                            <input type="number" value="{{old('count')}}" class="form-control" name="count">
                             @error('count')
                             <span class="text-danger">{{ $message }}</span>
                             @enderror

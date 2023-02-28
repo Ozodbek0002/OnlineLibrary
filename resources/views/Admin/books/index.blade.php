@@ -54,25 +54,62 @@
                                 <td>{!! $poet->count !!}</td>
                                 <td>{!! $poet->sell_count !!}</td>
                                 <td class="col-2">
-                                    <form action="{{ route('admin.books.destroy',$poet->id) }}" method="POST"
-                                          onSubmit="return confirm('Rostan ham o`chirilishini hohlaysizmi?');">
 
-                                        <a class="btn btn-warning btn-sm"
-                                           href="{{ route('admin.books.edit',$poet->id) }}">
+                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$poet->id}}" type="button" class="btn btn-danger  btn-sm">
                                             <span class="btn-label">
-                                                <i class="fa fa-pen"></i>
+                                                <i class="bx bx-trash"></i>
                                             </span>
-
-                                        </a>
-
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">
+                                    </button>
+                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$poet->id}}" type="button" class="btn btn-danger  btn-sm">
                                             <span class="btn-label">
-                                                <i class="fa fa-trash"></i>
+                                                <i class="bx bx-trash"></i>
                                             </span>
-                                        </button>
-                                    </form>
+                                    </button>
+
+                                    <a class="btn btn-warning btn-sm"
+                                       href="{{ route('admin.books.edit',$poet->id) }}">
+                                            <span class="btn-label">
+                                                <i class="bx bx-pen"></i>
+                                            </span>
+                                    </a>
+
+
+                                    <div class="modal fade" id="deleteModal{{$poet->id}}" tabindex="-1"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-3" id="exampleModalLabel">Haqiqatdan ham ushbu mavzuni
+                                                        o'chirib tashlamoqchimisiz ?</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+
+
+                                                <form action="{{route('admin.books.destroy',$poet->id)}}" method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                                                        <button type="submit" class="btn btn-danger">O'chirish</button>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+{{--                                    <form action="{{ route('admin.books.destroy',$poet->id) }}" method="POST">--}}
+
+{{--                                        @csrf--}}
+{{--                                        @method('DELETE')--}}
+{{--                                        <button type="submit" class="btn btn-danger btn-sm">--}}
+{{--                                            <span class="btn-label">--}}
+{{--                                                <i class="fa fa-trash"></i>--}}
+{{--                                            </span>--}}
+{{--                                        </button>--}}
+{{--                                    </form>--}}
 
                                 </td>
                             </tr>

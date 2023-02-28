@@ -75,7 +75,7 @@ class BookController extends Controller
 
         $data->save();
 
-        return redirect()->route('admin.books')->with('message', 'success');
+        return redirect()->route('admin.books')->with('msg', 'Kitob muvaffaqiyatli qo`shildi.');
     }
 
 
@@ -124,7 +124,7 @@ class BookController extends Controller
 
 
         $book->save();
-        return redirect()->route('admin.books');
+        return redirect()->route('admin.books')->with('msg','Kitob muvaffaqiyatli tahrirlandi.');
     }
 
 
