@@ -40,13 +40,19 @@
                                 <td>{!! $poet->busy->name  !!}</td>
                                 <td class="col-2">
 
+                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$poet->id}}" type="button" class="btn btn-danger  btn-sm">
+                                            <span class="btn-label">
+                                                <i class="bx bx-trash"></i>
+                                            </span>
+                                    </button>
+
                                     <a class="btn btn-warning btn-sm"
                                        href="{{ route('admin.orders.edit',$poet->id) }}">
                                             <span class="btn-label">
-                                                <i class="fa fa-pen"></i>
+                                                <i class="bx bx-pen"></i>
                                             </span>
-
                                     </a>
+
 
 {{-- Delete  Modals--}}
                                     <div class="modal fade" id="deleteModal{{$poet->id}}" tabindex="-1"
