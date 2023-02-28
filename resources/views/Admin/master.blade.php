@@ -55,9 +55,9 @@
     <script src="{{asset('/assets/js/config.js')}}"></script>
 
     {{--    Alert--}}
-    <link data-require="sweet-alert@*" data-semver="0.4.2" rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"/>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.all.min.js"></script>
+
 
 </head>
 
@@ -131,18 +131,14 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 {{--Bootstrap--}}
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous">
 
 </script>
 
 
 <script>
+
     let errors = @json($errors->all());
     @if($errors->any())
     let msg = '';
@@ -164,23 +160,6 @@
     });
     @endif
 
-    $('.show_confirm').click(function (event) {
-        var form = $(this).closest("form");
-        var name = $(this).data("name");
-        event.preventDefault();
-        swal({
-            title: `Haqiqatan ham bu yozuvni oʻchirib tashlamoqchimisiz?`,
-            text: "Agar siz buni o'chirib tashlasangiz, u abadiy yo'qoladi.",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-            buttons: ['Yo`q', 'Ha']
-        }).then((willDelete) => {
-            if (willDelete) {
-                form.submit();
-            }
-        });
-    });
 
 </script>
 
