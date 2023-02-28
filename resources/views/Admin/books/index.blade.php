@@ -28,12 +28,7 @@
                             <tr>
                             <th class="" scope="col">T/R</th>
                             <th class="" scope="col"> Nomi</th>
-                            <th class="" scope="col"> Muallif</th>
-{{--                            <th class="" scope="col"> Kategoriya</th>--}}
-{{--                            <th class="" scope="col"> Muqova</th>--}}
-{{--                            <th class="" scope="col"> Narxi</th>--}}
-{{--                            <th class="" scope="col"> Kunlik</th>--}}
-{{--                            <th class="" scope="col"> Beti</th>--}}
+                            <th class="" scope="col"> Rasmi</th>
                             <th class="" scope="col"> Soni</th>
                             <th class="" scope="col"> Sotildi</th>
                             <th class="" scope="col">Amallar</th>
@@ -45,19 +40,16 @@
                             <tr>
                                 <td class="col-1">{{($books->currentpage()-1)*($books->perpage())+$ind+1}}</td>
                                 <td>{!! $poet->title  !!}</td>
-                                <td>{!! $poet->author !!}</td>
-{{--                                <td>{!! $poet->category->name !!}</td>--}}
-{{--                                <td>{!! $poet->cover->name !!}</td>--}}
-{{--                                <td>{!! $poet->price !!}</td>--}}
-{{--                                <td>{!! $poet->price_daily !!}</td>--}}
-{{--                                <td>{!! $poet->page !!}</td>--}}
+                                <td>
+                                    <img src="{{asset('books/'.$poet->image)}}" alt="" width="100px" height="100px">
+                                </td>
                                 <td>{!! $poet->count !!}</td>
                                 <td>{!! $poet->sell_count !!}</td>
                                 <td class="col-2">
 
-                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$poet->id}}" type="button" class="btn btn-danger  btn-sm">
+                                    <button data-bs-toggle="modal" data-bs-target="#showModal{{$poet->id}}" type="button" class="btn btn-danger  btn-sm">
                                             <span class="btn-label">
-                                                <i class="bx bx-trash"></i>
+                                                <i class="fa fa-eye"></i>
                                             </span>
                                     </button>
                                     <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$poet->id}}" type="button" class="btn btn-danger  btn-sm">
@@ -65,7 +57,6 @@
                                                 <i class="bx bx-trash"></i>
                                             </span>
                                     </button>
-
                                     <a class="btn btn-warning btn-sm"
                                        href="{{ route('admin.books.edit',$poet->id) }}">
                                             <span class="btn-label">
@@ -74,6 +65,44 @@
                                     </a>
 
 
+
+
+{{-- Show  Modals--}}
+                                    <div class="modal fade" id="showModal{{$poet->id}}" tabindex="-1"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <table class="table table-bordered text-center">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="" scope="col">Muallifi</th>
+                                                        <th class="" scope="col"> Kategoriya</th>
+                                                        <th class="" scope="col"> Muqova</th>
+                                                        <th class="" scope="col"> Narxi</th>
+                                                        <th class="" scope="col"> Kunlik</th>
+                                                        <th class="" scope="col"> Beti</th>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>{!! $poet->author !!}</td>
+                                                        <td>{!! $poet->category->name !!}</td>
+                                                        <td>{!! $poet->cover->name !!}</td>
+                                                        <td>{!! $poet->price !!}</td>
+                                                        <td>{!! $poet->price_daily !!}</td>
+                                                        <td>{!! $poet->page !!}</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+{{-- Delete  Modals--}}
                                     <div class="modal fade" id="deleteModal{{$poet->id}}" tabindex="-1"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -84,7 +113,6 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>
                                                 </div>
-
 
                                                 <form action="{{route('admin.books.destroy',$poet->id)}}" method="post">
                                                     @csrf
@@ -100,16 +128,7 @@
                                         </div>
                                     </div>
 
-{{--                                    <form action="{{ route('admin.books.destroy',$poet->id) }}" method="POST">--}}
 
-{{--                                        @csrf--}}
-{{--                                        @method('DELETE')--}}
-{{--                                        <button type="submit" class="btn btn-danger btn-sm">--}}
-{{--                                            <span class="btn-label">--}}
-{{--                                                <i class="fa fa-trash"></i>--}}
-{{--                                            </span>--}}
-{{--                                        </button>--}}
-{{--                                    </form>--}}
 
                                 </td>
                             </tr>
