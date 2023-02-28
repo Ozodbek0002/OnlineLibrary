@@ -108,7 +108,7 @@
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h1 class="modal-title fs-3" id="exampleModalLabel">Haqiqatdan ham ushbu mavzuni
+                                                    <h1 class="modal-title fs-3" id="exampleModalLabel">Haqiqatdan ham ushbu xaridni
                                                         o'chirib tashlamoqchimisiz ?</h1>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                             aria-label="Close"></button>

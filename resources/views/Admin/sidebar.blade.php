@@ -87,8 +87,8 @@
             </a>
         </li>
 
-         <li class="menu-item {{ Route::is('admin.orders') ? 'active' : '' }}">
-            <a href="{{route('admin.orders')}}" class="menu-link ">
+         <li class="menu-item {{ Route::is('admin.clients') ? 'active' : '' }}">
+            <a href="{{route('admin.clients')}}" class="menu-link ">
                 <i class="menu-icon tf-icons bx bx-box"></i>
                 <div data-i18n="Tables">Xaridlar</div>
             </a>

@@ -15,9 +15,9 @@ class ClientController extends Controller
      */
     public function index(): View
     {
-        $books = Order::latest()->paginate(5);
+        $orders = Order::latest()->paginate(5);
         return view('admin.orders.index', [
-            'books'=>$books
+            'books'=>$orders
         ]);
     }
 
@@ -26,7 +26,7 @@ class ClientController extends Controller
      */
     public function create(): Response
     {
-        return response(view('admin.orders.create'));
+        //
     }
 
     /**
@@ -64,8 +64,10 @@ class ClientController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id): RedirectResponse
+    public function destroy($id): RedirectResponse
     {
-        //
+        $order = Order::find($id);
+        $order->delete();
+        return redirect()->route('admin.clients')->with('msg','Xarid muvaffaqiyatli o`chirildi.');
     }
 }
