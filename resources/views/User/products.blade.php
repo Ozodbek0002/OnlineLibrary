@@ -64,7 +64,7 @@
                                                 <li><i class="fa fa-star"></i></li>
                                                 <li><i class="fa fa-star"></i></li>
                                             </ul>
-                                            <span>Sotildi ({{$book->sell_count}})</span>
+                                            <span>Sotildi ({{$book->count}})</span>
 
                                         </div>
                                         <div class="d-flex justify-content-center">

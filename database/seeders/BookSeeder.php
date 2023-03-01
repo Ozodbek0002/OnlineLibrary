@@ -22,7 +22,6 @@ class BookSeeder extends Seeder
             'price_daily' => 2,
             'page' => 1216,
             'count' => 10,
-            'sell_count' => 0,
             'category_id' => 1,
             'cover_id' => 1,
 

@@ -13,7 +13,11 @@ class RouteController extends Controller
 {
 
     public function main(){
-        $books = Book::latest()->take(6)->get();
+        $books = Book::all()
+        ->where('count','>',0)
+        ->sortByDesc('created_at')
+        ->take(6);
+
         return view('User.main',[
             'books'=>$books
         ]);
@@ -93,16 +97,15 @@ class RouteController extends Controller
 
         if ($busy_id == 1) {
             $order->price = $book->price * $request->count;
-            $book->rent_count = $book->rent_count + $request->count;
         }else{
             $order->price = $book->price_daily * $request->count ;
-            $book->sell_count = $book->sell_count + $request->count;
         }
+
+        $order->save();
 
         $book->count = $book->count - $request->count;
         $book->save();
 
-        $order->save();
 
         return redirect()->back()->with('msg', 'Buyurtma muvaffaqqiyatli qabul qilindi.  Tez orada siz bilan bog`lanamiz');
     }

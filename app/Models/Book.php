@@ -17,7 +17,6 @@ class Book extends Model
         'price_daily',
         'page',
         'count',
-        'sell_count',
     ];
     use HasFactory;
 
@@ -34,6 +33,16 @@ class Book extends Model
     public function orders()
     {
         return $this->hasMany(Order::class);
+    }
+
+
+    public function sell_count()
+    {
+        return $this->hasMany(Order::class)->where('busy_id',1)->sum('count');
+    }
+    public function rent_count()
+    {
+        return $this->hasMany(Order::class)->where('busy_id',2)->sum('count');
     }
 
 }
