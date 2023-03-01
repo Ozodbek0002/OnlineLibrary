@@ -33,11 +33,9 @@
                         @foreach($books as $ind=>$poet)
                             <tr>
                                 <td class="col-1">{{($books->currentpage()-1)*($books->perpage())+$ind+1}}</td>
-                                <td>{!! $poet->book->title !!}</td>
-                                <td>{!! $poet->user_name  !!}</td>
-                                <td>{!! $poet->phone  !!}</td>
-                                <td>{!! $poet->count !!}</td>
-                                <td>{!! $poet->busy->name  !!}</td>
+                                <td>{{ $poet->book->title }}</td>
+                                <td>{{ $poet->client->name }}</td>
+
                                 <td class="col-2">
 
                                     <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$poet->id}}" type="button" class="btn btn-danger  btn-sm">

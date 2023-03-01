@@ -25,7 +25,11 @@ class RouteController extends Controller
 
     public function products(){
         $categories = Category::all();
-        $books = Book::paginate(9);
+        $books = Book::where('count','>',0)
+            ->OrderBy('created_at','desc')
+            ->paginate(9);
+
+
         return view('User.products',[
             'books'=>$books,
             'catigories'=>$categories,
@@ -108,6 +112,12 @@ class RouteController extends Controller
 
 
         return redirect()->back()->with('msg', 'Buyurtma muvaffaqqiyatli qabul qilindi.  Tez orada siz bilan bog`lanamiz');
+    }
+
+
+    public function logout(){
+        auth()->logout();
+        return redirect()->route('/');
     }
 
 }

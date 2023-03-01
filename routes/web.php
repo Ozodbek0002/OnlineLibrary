@@ -20,8 +20,9 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(funct
     Route::resource('books', BookController::class)->name('index', 'books');
     Route::resource('clients',ClientController::class)->name('index','clients');
     Route::resource('messages',MessageController::class)->name('index','messages');
-
 });
+
+Route::get('logout', [RouteController::class, 'logout'])->name('logout');
 
 
 Route::middleware('auth')->group(function () {
