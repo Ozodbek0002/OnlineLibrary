@@ -18,6 +18,10 @@ return new class extends Migration
             $table->foreignId('busy_id')->constrained()->onDelete('cascade');
             $table->string('phone');
             $table->integer('count');
+            $table->string('price')->nullable();
+            $table->boolean('is_active')->default(true);
+            $table->boolean('is_paid')->default(false);
+            $table->boolean('is_returned')->default(false);
 
             $table->timestamps();
         });

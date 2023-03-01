@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Message;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RouteController extends Controller
 {
@@ -80,14 +81,23 @@ class RouteController extends Controller
         $order  = new Order();
         $book = Book::find($request->book_id);
 
-        if ($book->count <= $request->count || $book->count == 0){
+        if ($book->count < $request->count || $book->count == 0){
             return redirect()->back()->withErrors('Siz so\'ragan miqdorda kitob mavjud emas. Bizda joriy vaqtda '.$book->count.' ta kitob mavjud');
         }
+
         $order->book_id = $request->book_id;
         $order->user_name = $request->user_name;
         $order->phone = $request->phone;
         $order->busy_id = $busy_id;
         $order->count = $request->count;
+
+        if ($busy_id == 1) {
+            $order->price = $book->price * $request->count;
+            $book->rent_count = $book->rent_count + $request->count;
+        }else{
+            $order->price = $book->price_daily * $request->count ;
+            $book->sell_count = $book->sell_count + $request->count;
+        }
 
         $book->count = $book->count - $request->count;
         $book->save();
