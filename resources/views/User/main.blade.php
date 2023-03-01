@@ -54,7 +54,7 @@
                                     <li><i class="fa fa-star"></i></li>
                                     <li><i class="fa fa-star"></i></li>
                                 </ul>
-                                <span>Sotildi ({{$book->sell_count}})</span>
+                                <span>Sotildi ({{$book->sell_count()}})</span>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <a style="margin: 10px;" href="{{route('product',$book->id)}}" type="button"

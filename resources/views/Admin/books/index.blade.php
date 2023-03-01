@@ -32,6 +32,7 @@
                             <th class="" scope="col"> Kategoriya</th>
                             <th class="" scope="col"> Soni</th>
                             <th class="" scope="col"> Sotildi</th>
+                            <th class="" scope="col"> Ijarada</th>
                             <th class="" scope="col">Amallar</th>
                         </tr>
                         </thead>
@@ -46,7 +47,8 @@
                                 </td>
                                 <td>{!! $poet->category->name !!}</td>
                                 <td>{!! $poet->count !!}</td>
-                                <td>{!! $poet->sell_count !!}</td>
+                                <td>{!! $poet->sell_count() !!}</td>
+                                <td>{!! $poet->rent_count() !!}</td>
                                 <td class="col-2">
 
                                     <button data-bs-toggle="modal" data-bs-target="#showModal{{$poet->id}}"

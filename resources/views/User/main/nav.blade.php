@@ -24,7 +24,7 @@
                         <a class="nav-link" href="{{url('/')}}"> Asosiy  </a>
                     </li>
                     <li class="nav-item {{ Route::is('products') ? 'active' : '' }}">
-                        <a class="nav-link" href="{{('products')}}"> Kitoblar </a>
+                        <a class="nav-link" href="{{route('products')}}"> Kitoblar </a>
                     </li>
                     <li class="nav-item {{ Route::is('about') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('about')}}">Biz haqimizda</a>
