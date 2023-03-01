@@ -80,7 +80,7 @@ class RouteController extends Controller
         $order  = new Order();
         $book = Book::find($request->book_id);
         if ($book->count <= $request->count || $book->count == 0){
-            return redirect()->back()->withErrors('Siz so\'ragan miqdorda kitob mavjud emas');
+            return redirect()->back()->withErrors('Siz so\'ragan miqdorda kitob mavjud emas. Bizda joriy vaqtda '.$book->count.' ta kitob mavjud');
         }
         $order->book_id = $request->book_id;
         $order->user_name = $request->user_name;
@@ -90,7 +90,7 @@ class RouteController extends Controller
 
         $order->save();
 
-        return redirect()->back()->with('msg', 'Buyurtma Muvaffaqqiyatli Yuborildi');
+        return redirect()->back()->with('msg', 'Buyurtma muvaffaqqiyatli qabul qilindi.  Tez orada siz bilan bog`lanamiz');
     }
 
 }
