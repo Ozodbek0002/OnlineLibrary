@@ -76,17 +76,21 @@ class RouteController extends Controller
     }
 
 
-    public function order(Request $request){
+    public function order(Request $request, $busy_id){
         $order  = new Order();
         $book = Book::find($request->book_id);
+
         if ($book->count <= $request->count || $book->count == 0){
             return redirect()->back()->withErrors('Siz so\'ragan miqdorda kitob mavjud emas. Bizda joriy vaqtda '.$book->count.' ta kitob mavjud');
         }
         $order->book_id = $request->book_id;
         $order->user_name = $request->user_name;
         $order->phone = $request->phone;
-        $order->busy_id = $request->busy_id;
+        $order->busy_id = $busy_id;
         $order->count = $request->count;
+
+        $book->count = $book->count - $request->count;
+        $book->save();
 
         $order->save();
 
