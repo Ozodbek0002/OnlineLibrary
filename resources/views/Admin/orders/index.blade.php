@@ -49,22 +49,33 @@
 
                                 </td>
                                 <td>{{ $order->created_at->format('d-m-Y') }}</td>
+
                                 <td>
                                     @if($order->busy_id ==2)
-                                        <span class="badge bg-success">{{ $order->busy->name }}</span>
+                                        <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
+                                                type="button" class="btn btn-outline-success  btn-sm">
+                                               {{ $order->busy->name }}
+                                        </button>
                                     @endif
                                     @if($order->busy_id ==1)
-                                        <span class="badge bg-info">{{ $order->busy->name }} </span>
+                                            <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
+                                                    type="button" class="btn btn-outline-primary  btn-sm">
+                                                {{ $order->busy->name }}
+                                            </button>
                                     @endif
 
 
                                 </td>
+
                                 <td>
                                     @if($order->is_paid ==1)
-                                        <span class="badge bg-success">To'landi</span>
+                                            <span class="badge bg-success">To'landi</span>
                                     @endif
                                     @if($order->is_paid ==0)
-                                        <span class="badge bg-danger">To'lanmadi</span>
+                                            <button data-bs-toggle="modal" data-bs-target="#sentModal{{$order->id}}"
+                                                    type="button" class="btn btn-outline-danger   btn-sm">
+                                                    To'lanmadi
+                                            </button>
                                     @endif
 
                                 </td>
@@ -81,19 +92,16 @@
                                 <td class="col-2">
 
 
+
+
                                     <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
-                                            type="button" class="btn btn-primary  btn-sm">
+                                            type="button" class="btn btn-info  btn-sm">
                                             <span class="btn-label">
                                                 <i class="fa fa-plane"></i>
                                             </span>
                                     </button>
 
-                                     <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
-                                            type="button" class="btn btn-success  btn-sm">
-                                            <span class="btn-label">
-                                                <i class="fa fa-eye"></i>
-                                            </span>
-                                    </button>
+
 
 
 
@@ -104,7 +112,8 @@
                                             </span>
                                     </button>
 
-                                    {{-- Show  Modals--}}
+
+                                    {{-- sent  Modals--}}
                                     <div class="modal fade" id="showModal{{$order->id}}" tabindex="-1"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -127,7 +136,30 @@
                                         </div>
                                     </div>
 
-                                    {{-- Edit  Modals--}}
+                                    {{-- Show  Modals--}}
+
+                                    <div class="modal fade" id="showModal{{$order->id}}" tabindex="-1"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <table class="table table-bordered text-center">
+                                                    <thead>
+                                                    <tr>
+                                                        <th class="" scope="col"> Mijoz</th>
+                                                        <th class="" scope="col"> Telefon</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>{{ $order->user_name }}</td>
+                                                        <td>{{ $order->phone }}</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
 
 
                                     {{-- Delete  Modals--}}

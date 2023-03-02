@@ -7,6 +7,7 @@ use App\Http\Controllers\RouteController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\TradeController;
 
 
 
@@ -20,6 +21,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(funct
     Route::resource('books', BookController::class)->name('index', 'books');
     Route::resource('clients',ClientController::class)->name('index','clients');
     Route::resource('messages',MessageController::class)->name('index','messages');
+    Route::get('sent/{id}',[TradeController::class,'sent'])->name('sent');
 });
 
 Route::get('logout', [RouteController::class, 'logout'])->name('logout');
