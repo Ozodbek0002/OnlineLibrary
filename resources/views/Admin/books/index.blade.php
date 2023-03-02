@@ -38,33 +38,33 @@
                         </thead>
                         <tbody>
 
-                        @foreach($books as $ind=>$poet)
+                        @foreach($books as $ind=>$book)
                             <tr>
                                 <td class="col-1">{{($books->currentpage()-1)*($books->perpage())+$ind+1}}</td>
-                                <td>{{ $poet->title  }}</td>
+                                <td>{{ $book->title  }}</td>
                                 <td>
-                                    <img src="{{asset('books/'.$poet->image)}}" alt="" width="100px" height="100px">
+                                    <img src="{{asset('books/'.$book->image)}}" alt="" width="100px" height="100px">
                                 </td>
-                                <td>{{ $poet->category->name }}</td>
-                                <td>{{ $poet->count }}</td>
-                                <td>{{ $poet->sell_count() }}</td>
-                                <td>{{ $poet->rent_count() }}</td>
+                                <td>{{ $book->category->name }}</td>
+                                <td>{{ $book->count }}</td>
+                                <td>{{ $book->sell_count() }}</td>
+                                <td>{{ $book->rent_count() }}</td>
                                 <td class="col-2">
 
-                                    <button data-bs-toggle="modal" data-bs-target="#showModal{{$poet->id}}"
-                                            type="button" class="btn btn-danger  btn-sm">
+                                    <button data-bs-toggle="modal" data-bs-target="#showModal{{$book->id}}"
+                                            type="button" class="btn btn-success  btn-sm">
                                             <span class="btn-label">
                                                 <i class="fa fa-eye"></i>
                                             </span>
                                     </button>
-                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$poet->id}}"
+                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$book->id}}"
                                             type="button" class="btn btn-danger  btn-sm">
                                             <span class="btn-label">
                                                 <i class="bx bx-trash"></i>
                                             </span>
                                     </button>
                                     <a class="btn btn-warning btn-sm"
-                                       href="{{ route('admin.books.edit',$poet->id) }}">
+                                       href="{{ route('admin.books.edit',$book->id) }}">
                                             <span class="btn-label">
                                                 <i class="bx bx-pen"></i>
                                             </span>
@@ -72,7 +72,7 @@
 
 
                                     {{-- Show  Modals--}}
-                                    <div class="modal fade" id="showModal{{$poet->id}}" tabindex="-1"
+                                    <div class="modal fade" id="showModal{{$book->id}}" tabindex="-1"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -89,11 +89,11 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>{{ $poet->author }}</td>
-                                                        <td>{{ $poet->cover->name }}</td>
-                                                        <td>{{ $poet->price }}</td>
-                                                        <td>{{ $poet->price_daily }}</td>
-                                                        <td>{{ $poet->page }}</td>
+                                                        <td>{{ $book->author }}</td>
+                                                        <td>{{ $book->cover->name }}</td>
+                                                        <td>{{ $book->price }}</td>
+                                                        <td>{{ $book->price_daily }}</td>
+                                                        <td>{{ $book->page }}</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -105,7 +105,7 @@
 
 
                                     {{-- Delete  Modals--}}
-                                    <div class="modal fade" id="deleteModal{{$poet->id}}" tabindex="-1"
+                                    <div class="modal fade" id="deleteModal{{$book->id}}" tabindex="-1"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -117,7 +117,7 @@
                                                             aria-label="Close"></button>
                                                 </div>
 
-                                                <form action="{{route('admin.books.destroy',$poet->id)}}" method="post">
+                                                <form action="{{route('admin.books.destroy',$book->id)}}" method="post">
                                                     @csrf
                                                     @method('DELETE')
 

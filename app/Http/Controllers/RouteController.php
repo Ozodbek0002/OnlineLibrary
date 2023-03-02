@@ -112,6 +112,7 @@ class RouteController extends Controller
 
 
         return redirect()->back()->with('msg', 'Buyurtma muvaffaqqiyatli qabul qilindi.  Tez orada siz bilan bog`lanamiz');
+
     }
 
 

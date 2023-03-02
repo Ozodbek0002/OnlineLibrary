@@ -13,6 +13,10 @@ class Order extends Model
         'phone',
         'busy_id',
         'count',
+        'price',
+        'is_active',
+        'is_paid',
+        'is_returned',
     ];
 
     use HasFactory;

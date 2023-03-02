@@ -15,7 +15,7 @@ class BusySeeder extends Seeder
     {
 
         $busy = Busy::create([
-            'name' => 'O`qilmoqda',
+            'name' => 'Ijarada',
         ]);
 
         $busy = Busy::create([
