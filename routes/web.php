@@ -22,6 +22,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(funct
     Route::resource('clients',ClientController::class)->name('index','clients');
     Route::resource('messages',MessageController::class)->name('index','messages');
     Route::get('sent/{id}',[TradeController::class,'sent'])->name('sent');
+    Route::get('pay/{id}',[TradeController::class,'pay'])->name('pay');
 });
 
 Route::get('logout', [RouteController::class, 'logout'])->name('logout');

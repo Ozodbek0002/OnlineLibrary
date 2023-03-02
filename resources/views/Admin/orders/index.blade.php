@@ -72,7 +72,7 @@
                                             <span class="badge bg-success">To'landi</span>
                                     @endif
                                     @if($order->is_paid ==0)
-                                            <button data-bs-toggle="modal" data-bs-target="#sentModal{{$order->id}}"
+                                            <button data-bs-toggle="modal" data-bs-target="#payModal{{$order->id}}"
                                                     type="button" class="btn btn-outline-danger   btn-sm">
                                                     To'lanmadi
                                             </button>
@@ -84,7 +84,7 @@
                                         <span class="badge bg-success">Yangi</span>
                                     @endif
                                     @if($order->is_active ==0)
-                                        <span class="badge bg-danger">Yuborildi</span>
+                                        <span class="badge bg-primary">Yuborildi</span>
                                     @endif
 
                                 </td>
@@ -93,16 +93,12 @@
 
 
 
-
-                                    <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
+                                    <button data-bs-toggle="modal" data-bs-target="#sentModal{{$order->id}}"
                                             type="button" class="btn btn-info  btn-sm">
                                             <span class="btn-label">
                                                 <i class="fa fa-plane"></i>
                                             </span>
                                     </button>
-
-
-
 
 
                                     <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$order->id}}"
@@ -113,31 +109,65 @@
                                     </button>
 
 
-                                    {{-- sent  Modals--}}
-                                    <div class="modal fade" id="showModal{{$order->id}}" tabindex="-1"
+                                    {{-- pay  Modals--}}
+                                    <div class="modal fade" id="payModal{{$order->id}}" tabindex="-1"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
-                                                <table class="table table-bordered text-center">
-                                                    <thead>
-                                                    <tr>
-                                                        <th class="" scope="col"> Mijoz</th>
-                                                        <th class="" scope="col"> Telefon</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <td>{{ $order->user_name }}</td>
-                                                        <td>{{ $order->phone }}</td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-3" id="exampleModalLabel">Haqiqatdan ham ushbu kitobga to`lov qilindimi?</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+
+
+                                                <form action="{{route('admin.pay',$order->id)}}"
+                                                      method="get">
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                                data-bs-dismiss="modal">Yo'q
+                                                        </button>
+                                                        <button type="submit" class="btn btn-success">Ha</button>
+                                                    </div>
+                                                </form>
+
                                             </div>
                                         </div>
                                     </div>
+
+
+                                    {{-- sent  Modals--}}
+                                    <div class="modal fade" id="sentModal{{$order->id}}" tabindex="-1"
+                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-3" id="exampleModalLabel">Haqiqatdan ham ushbu kitobni mijozga jo'natilsinmi?</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+
+
+                                                <form action="{{route('admin.sent',$order->id)}}"
+                                                      method="get">
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger"
+                                                                data-bs-dismiss="modal">Yo'q
+                                                        </button>
+                                                        <button type="submit" class="btn btn-success">Ha</button>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                     {{-- Show  Modals--}}
-
                                     <div class="modal fade" id="showModal{{$order->id}}" tabindex="-1"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
@@ -159,7 +189,6 @@
                                             </div>
                                         </div>
                                     </div>
-
 
 
                                     {{-- Delete  Modals--}}
@@ -167,6 +196,7 @@
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
+
                                                 <div class="modal-header">
                                                     <h1 class="modal-title fs-3" id="exampleModalLabel">Haqiqatdan ham
                                                         ushbu xaridni
