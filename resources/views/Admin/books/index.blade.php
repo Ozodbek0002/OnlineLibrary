@@ -41,14 +41,14 @@
                         @foreach($books as $ind=>$poet)
                             <tr>
                                 <td class="col-1">{{($books->currentpage()-1)*($books->perpage())+$ind+1}}</td>
-                                <td>{!! $poet->title  !!}</td>
+                                <td>{{ $poet->title  }}</td>
                                 <td>
                                     <img src="{{asset('books/'.$poet->image)}}" alt="" width="100px" height="100px">
                                 </td>
-                                <td>{!! $poet->category->name !!}</td>
-                                <td>{!! $poet->count !!}</td>
-                                <td>{!! $poet->sell_count() !!}</td>
-                                <td>{!! $poet->rent_count() !!}</td>
+                                <td>{{ $poet->category->name }}</td>
+                                <td>{{ $poet->count }}</td>
+                                <td>{{ $poet->sell_count() }}</td>
+                                <td>{{ $poet->rent_count() }}</td>
                                 <td class="col-2">
 
                                     <button data-bs-toggle="modal" data-bs-target="#showModal{{$poet->id}}"
@@ -89,11 +89,11 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>{!! $poet->author !!}</td>
-                                                        <td>{!! $poet->cover->name !!}</td>
-                                                        <td>{!! $poet->price !!}</td>
-                                                        <td>{!! $poet->price_daily !!}</td>
-                                                        <td>{!! $poet->page !!}</td>
+                                                        <td>{{ $poet->author }}</td>
+                                                        <td>{{ $poet->cover->name }}</td>
+                                                        <td>{{ $poet->price }}</td>
+                                                        <td>{{ $poet->price_daily }}</td>
+                                                        <td>{{ $poet->page }}</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>

@@ -30,15 +30,18 @@
                         </thead>
                         <tbody>
 
-                        @foreach($books as $ind=>$poet)
+                        @foreach($orders as $ind=>$order)
                             <tr>
-                                <td class="col-1">{{($books->currentpage()-1)*($books->perpage())+$ind+1}}</td>
-                                <td>{{ $poet->book->title }}</td>
-                                <td>{{ $poet->client->name }}</td>
+                                <td class="col-1">{{($orders->currentpage()-1)*($orders->perpage())+$ind+1}}</td>
+                                <td>{{ $order->book->title }}</td>
+                                <td>{{ $order->user_name }}</td>
+                                <td>{{ $order->phone }}</td>
+                                <td>{{ $order->busy->name }}</td>
+                                <td>{{ $order->busy->name }}</td>
 
                                 <td class="col-2">
 
-                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$poet->id}}" type="button" class="btn btn-danger  btn-sm">
+                                    <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$order->id}}" type="button" class="btn btn-danger  btn-sm">
                                             <span class="btn-label">
                                                 <i class="bx bx-trash"></i>
                                             </span>
@@ -47,7 +50,7 @@
 
 
 {{-- Delete  Modals--}}
-                                    <div class="modal fade" id="deleteModal{{$poet->id}}" tabindex="-1"
+                                    <div class="modal fade" id="deleteModal{{$order->id}}" tabindex="-1"
                                          aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
@@ -58,7 +61,7 @@
                                                             aria-label="Close"></button>
                                                 </div>
 
-                                                <form action="{{route('admin.clients.destroy',$poet->id)}}" method="post">
+                                                <form action="{{route('admin.clients.destroy',$order->id)}}" method="post">
                                                     @csrf
                                                     @method('DELETE')
 
@@ -86,9 +89,9 @@
                     <div class="container">
                         <div class="row justify-content-center">
 
-                            @if ($books->links())
+                            @if ($orders->links())
                                 <div class="mt-4 p-4 box has-text-centered">
-                                    {{ $books->links() }}
+                                    {{ $orders->links() }}
                                 </div>
                             @endif
 

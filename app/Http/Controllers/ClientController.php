@@ -17,7 +17,7 @@ class ClientController extends Controller
     {
         $orders = Order::latest()->paginate(5);
         return view('admin.orders.index', [
-            'books'=>$orders
+            'orders'=>$orders
         ]);
     }
 

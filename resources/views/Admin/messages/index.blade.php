@@ -22,8 +22,8 @@
                         @foreach($messages as $ind=>$poet)
                             <tr>
                                 <td class="col-1">{{($messages->currentpage()-1)*($messages->perpage())+$ind+1}}</td>
-                                <td>{!! $poet->mavzu  !!}</td>
-                                <td>{!! $poet->name !!}</td>
+                                <td>{{ $poet->mavzu  }}</td>
+                                <td>{{ $poet->name }}</td>
                                 <td>
                                     @if($poet->status=='new')
                                         <button class="btn btn-success">
