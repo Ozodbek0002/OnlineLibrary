@@ -32,15 +32,14 @@ class MessageController extends Controller
     }
 
 
-    public function show(string $id): Response
+    public function show(string $id): RedirectResponse
     {
         $message = Message::find($id);
         $message->status = 'readed';
         $message->save();
 
-        return response(view('admin.messages.show',[
-            'message'=>$message
-        ]));
+        return redirect()->route('admin.messages')->with('message',' ');
+
     }
 
 

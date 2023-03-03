@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{asset('user/assets/css/templatemo-sixteen.css')}}">
     <link rel="stylesheet" href="{{asset('user/assets/css/owl.css')}}">
 
+
     {{--    Alert--}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.all.min.js"></script>
@@ -72,13 +73,16 @@
 
 @include('User.main.nav')
 
+
+
 <!-- Page Content -->
-
-
 @yield('content')
 
 
+
 @include('User.main.footer')
+
+
 
 @yield('script')
 <!-- Bootstrap core JavaScript -->
