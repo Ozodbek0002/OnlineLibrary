@@ -341,7 +341,7 @@
                         <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
                             <div class="d-flex p-4 pt-3">
                                 <div class="avatar flex-shrink-0 me-3">
-                                    <img src="../assets/img/icons/unicons/wallet.png" alt="User"/>
+                                    <img src="{{ assert('assets/img/icons/unicons/wallet.png') }}" alt="User"/>
                                 </div>
                                 <div>
                                     <small class="text-muted d-block">Total Balance</small>
@@ -359,6 +359,7 @@
                                 <div class="flex-shrink-0">
                                     <div id="expensesOfWeek"></div>
                                 </div>
+
                                 <div>
                                     <p class="mb-n1 mt-1">Expenses This Week</p>
                                     <small class="text-muted">$39 less than last week</small>
@@ -374,8 +375,9 @@
         <!-- Transactions -->
         <div class="col-md-6 col-lg-4 order-2 mb-4">
             <div class="card h-100">
+
                 <div class="card-header d-flex align-items-center justify-content-between">
-                    <h5 class="card-title m-0 me-2">Transactions</h5>
+                    <h5 class="card-title m-0 me-2">Umumiy sotuv</h5>
                     <div class="dropdown">
                         <button
                             class="btn p-0"
@@ -383,14 +385,14 @@
                             id="transactionID"
                             data-bs-toggle="dropdown"
                             aria-haspopup="true"
-                            aria-expanded="false"
-                        >
+                            aria-expanded="false">
                             <i class="bx bx-dots-vertical-rounded"></i>
                         </button>
+
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
-                            <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-                            <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-                            <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                            <a class="dropdown-item" href="javascript:void(1);">Bugun</a>
+                            <a class="dropdown-item" href="javascript:void(0);">O'tgan hafta</a>
+                            <a class="dropdown-item" href="javascript:void(0);">O'tgan oy</a>
                         </div>
                     </div>
                 </div>
@@ -399,16 +401,16 @@
                     <ul class="p-0 m-0">
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                                <img src="../assets/img/icons/unicons/paypal.png" alt="User" class="rounded"/>
+                                <img src="{{ asset('/assets/img/icons/unicons/paypal.png') }}" alt="User" class="rounded"/>
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                 <div class="me-2">
-                                    <small class="text-muted d-block mb-1">Paypal</small>
-                                    <h6 class="mb-0">Send money</h6>
+                                    <small class="text-muted d-block mb-1">To'lovlar</small>
+                                    <h6 class="mb-0">Kirim</h6>
                                 </div>
                                 <div class="user-progress d-flex align-items-center gap-1">
-                                    <h6 class="mb-0">+82.6</h6>
-                                    <span class="text-muted">USD</span>
+                                    <h6 class="mb-0">{{ $money ?? 0 }}</h6>
+                                    <span class="text-muted">So'm</span>
                                 </div>
                             </div>
                         </li>
