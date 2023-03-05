@@ -18,6 +18,13 @@ class Book extends Model
         'page',
         'count',
     ];
+
+    public static function sell_books_count()
+    {
+        return Book::where('count','>',0)->count();
+    }
+
+
     use HasFactory;
 
     public function category()

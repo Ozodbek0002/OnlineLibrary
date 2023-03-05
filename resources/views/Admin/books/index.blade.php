@@ -61,7 +61,8 @@
                                     <img src="{{asset('books/'.$book->image)}}" alt="" width="100px" height="100px">
                                 </td>
                                 <td>{{ $book->category->name }}</td>
-                                <td>{{ $book->count }}</td>
+
+                                <td     @if($book->count==0) style="color: red" @endif >{{ $book->count }}</td>
                                 <td>{{ $book->sell_count() }}</td>
                                 <td>{{ $book->rent_count() }}</td>
                                 <td class="col-2">

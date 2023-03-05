@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
@@ -18,7 +19,7 @@ Route::get('/', function () {
 
 
 Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(function () {
-    Route::get('/', function () {  return view('admin.dashboard');  })->name('dashboard');
+    Route::get('/',[DashboardController::class,'dashboard'])->name('dashboard');
     Route::resource('books', BookController::class)->name('index', 'books');
     Route::resource('clients',ClientController::class)->name('index','clients');
     Route::resource('messages',MessageController::class)->name('index','messages');
