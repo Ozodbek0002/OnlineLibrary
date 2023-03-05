@@ -51,7 +51,7 @@
 
                                 <div class="col-lg-4 col-md-4 all {{$book->category->name}}">
                                     <div class="product-item">
-                                        <a href="#"><img style="width: 100%; height: 250px" src="books/{{$book->image}}"
+                                        <a  href="{{route('product',$book->id)}}"><img style="width: 100%; height: 250px" src="books/{{$book->image}}"
                                                          alt=""></a>
                                         <div class="down-content">
                                             <a href="#"><h4>{{substr($book->title,0,17)}}...</h4></a>
