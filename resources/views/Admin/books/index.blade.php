@@ -3,12 +3,27 @@
 
     <div class="col-md-12">
         <div class="card">
+
             <div class="card-header">
 
-                <div class="row">
+                <div class="row ">
 
-                    <div class="col-10"><h1 class="card-title">Kitoblar </h1></div>
-                    <div class="col-md-1">
+                    <div class="col-md-3"><h1 class="card-title">Kitoblar </h1></div>
+
+                    <div class="col-md-6">
+
+                        <form action="{{route('admin.search')}}" method="post">
+                            @csrf
+                            <div class="input-group">
+                                <input type="text" name="search" class="form-control" placeholder="Qidirish...">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-3">
                         <a class="btn btn-primary" href="{{route('admin.books.create')}}">
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>

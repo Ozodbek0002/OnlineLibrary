@@ -8,6 +8,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\TradeController;
+use App\Http\Controllers\BookSearchController;
 
 
 
@@ -23,6 +24,7 @@ Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(funct
     Route::resource('messages',MessageController::class)->name('index','messages');
     Route::get('sent/{id}',[TradeController::class,'sent'])->name('sent');
     Route::get('pay/{id}',[TradeController::class,'pay'])->name('pay');
+    Route::post('search',[BookSearchController::class,'search'])->name('search');
 });
 
 Route::get('logout', [RouteController::class, 'logout'])->name('logout');

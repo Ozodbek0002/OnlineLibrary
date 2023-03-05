@@ -9,19 +9,22 @@
     </div>
 
     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-        <!-- Search -->
-        <div class="navbar-nav align-items-center">
-            <div class="nav-item d-flex align-items-center">
-                <i class="bx bx-search fs-4 lh-0"></i>
-                <input
-                    type="text"
-                    class="form-control border-0 shadow-none"
-                    placeholder="Search..."
-                    aria-label="Search..."
-                />
-            </div>
-        </div>
-        <!-- /Search -->
+
+{{--        <!-- Search -->--}}
+{{--        <div class="navbar-nav align-items-center">--}}
+{{--            <div class="nav-item d-flex align-items-center">--}}
+{{--                <form action="">--}}
+{{--                    <div class="input-group input-group-merge search-bar">--}}
+{{--                        <span class="input-group-text" id="topbar-addon">--}}
+{{--                            <i class="bx bx-search"></i>--}}
+{{--                        </span>--}}
+{{--                        <input type="text" class="form-control" placeholder="Kitob qidirish..." aria-label="Search..." aria-describedby="topbar-addon" />--}}
+{{--                        <button type="submit" class="btn btn-primary">Qidirish</button>--}}
+{{--                    </div>--}}
+{{--                </form>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <!-- /Search -->--}}
 
         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
@@ -29,16 +32,17 @@
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                        <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                        <img src="{{asset('assets/img/avatars/1.png')}}" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                 </a>
+
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
                         <a class="dropdown-item" href="#">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
-                                        <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                        <img src="{{asset('assets/img/avatars/1.png')}}" alt class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
@@ -57,7 +61,6 @@
                             <span class="align-middle">My Profile</span>
                         </a>
                     </li>
-
                     <li>
                         <div class="dropdown-divider"></div>
                     </li>

@@ -54,7 +54,7 @@
                                         <a  href="{{route('product',$book->id)}}"><img style="width: 100%; height: 250px" src="books/{{$book->image}}"
                                                          alt=""></a>
                                         <div class="down-content">
-                                            <a href="#"><h4>{{substr($book->title,0,17)}}...</h4></a>
+                                            <a  href="{{route('product',$book->id)}}" ><h4>{{substr($book->title,0,17)}}...</h4></a>
                                             <h6>{{$book->price}} so'm</h6>
                                             <p> {{$book->author}} </p>
                                             <ul class="stars">
