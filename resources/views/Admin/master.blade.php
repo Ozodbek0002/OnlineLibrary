@@ -104,8 +104,6 @@
 <!-- / Layout wrapper -->
 
 
-
-
 <!-- Core JS -->
 @yield('script')
 
