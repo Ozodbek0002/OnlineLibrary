@@ -401,7 +401,7 @@
             },
             series: [
                 {
-                    data: [110, 270, 145, 245, 205, 285,1,2]
+                    data: all_books_monthly
                 }
             ],
             xaxis: {
@@ -424,6 +424,8 @@
         const profileReportChart = new ApexCharts(profileReportChartEl, profileReportChartConfig);
         profileReportChart.render();
     }
+
+
 
     // Order Statistics Chart
     // --------------------------------------------------------------------
