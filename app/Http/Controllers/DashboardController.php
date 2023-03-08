@@ -31,7 +31,6 @@ class DashboardController extends Controller
         ];
         $rent_monthly = [];
         $sell_monthly = [];
-        $rent_count = 0;
 
         for ($i=1; $i<=12; $i++){
            $rent_monthly[$i] = Order::whereMonth('created_at', $i)->where('busy_id',2)->sum('count');

@@ -368,7 +368,7 @@
         profileReportChartConfig = {
             chart: {
                 height: 80,
-                // width: 175,
+                width: 175,
                 type: 'line',
                 toolbar: {
                     show: false
@@ -401,7 +401,7 @@
             },
             series: [
                 {
-                    data: [110, 270, 145, 245, 205, 285]
+                    data: [110, 270, 145, 245, 205, 285,1,2]
                 }
             ],
             xaxis: {
