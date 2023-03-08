@@ -108,6 +108,7 @@
                             </div>
                         </div>
 
+
                         <div id="growthChart"></div>
                         <div class="text-center fw-semibold pt-3 mb-2">62% Company Growth</div>
 
@@ -175,7 +176,6 @@
                         </div>
                     </div>
                 </div>
-
 
             </div>
 
