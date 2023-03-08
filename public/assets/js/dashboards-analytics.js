@@ -278,6 +278,7 @@
 
 
 
+
     // Growth Chart - Radial Bar Chart
     // --------------------------------------------------------------------
     const growthChartEl = document.querySelector('#growthChart'),
@@ -359,6 +360,7 @@
         const growthChart = new ApexCharts(growthChartEl, growthChartOptions);
         growthChart.render();
     }
+
 
 
     // Profit Report Line Chart
@@ -497,6 +499,8 @@
         statisticsChart.render();
     }
 
+
+
     // Income Chart - Area chart
     // --------------------------------------------------------------------
     const incomeChartEl = document.querySelector('#incomeChart'),
@@ -596,6 +600,7 @@
         incomeChart.render();
     }
 
+
     // Expenses Mini Chart - Radial Chart
     // --------------------------------------------------------------------
     const weeklyExpensesEl = document.querySelector('#expensesOfWeek'),
@@ -668,4 +673,6 @@
         const weeklyExpenses = new ApexCharts(weeklyExpensesEl, weeklyExpensesConfig);
         weeklyExpenses.render();
     }
+
+
 })();
