@@ -87,58 +87,11 @@
                     </div>
                     <div class="col-md-4">
 
-                        <div class="card-body">
-                            <div class="text-center">
-                                <div class="dropdown">
-                                    <button
-                                        class="btn btn-sm btn-outline-primary dropdown-toggle"
-                                        type="button"
-                                        id="growthReportId"
-                                        data-bs-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
-                                    >
-                                        2022
-                                    </button>
-                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="growthReportId">
-                                        <a class="dropdown-item" href="javascript:void(0);">2021</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div id="growthChart"></div>
-                        <div class="text-center fw-semibold pt-3 mb-2">62% Company Growth</div>
-
-                        <div class="d-flex px-xxl-4 px-lg-2 p-4 gap-xxl-3 gap-lg-1 gap-3 justify-content-between">
-                            <div class="d-flex">
-                                <div class="me-2">
-                                    <span class="badge bg-label-primary p-2"><i
-                                            class="bx bx-dollar text-primary"></i></span>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    <small>2022</small>
-                                    <h6 class="mb-0">$32.5k</h6>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <div class="me-2">
-                                    <span class="badge bg-label-info p-2"><i class="bx bx-wallet text-info"></i></span>
-                                </div>
-                                <div class="d-flex flex-column">
-                                    <small>2021</small>
-                                    <h6 class="mb-0">$41.2k</h6>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!--/ Total Revenue -->
         <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
@@ -155,8 +108,8 @@
                                 </div>
 
                             </div>
-                            <span class="d-block mb-1">Payments</span>
-                            <h3 class="card-title text-nowrap mb-2">$2,456</h3>
+                            <span class="d-block mb-1">Kitob turlari</span>
+                            <h3 class="card-title text-nowrap mb-2">{{ $books_count }} ta</h3>
                         </div>
                     </div>
                 </div>
@@ -188,14 +141,10 @@
                             <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
                                 <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
                                     <div class="card-title">
-                                        <h5 class="text-nowrap mb-2">Profile Report</h5>
-                                        <span class="badge bg-label-warning rounded-pill">Year 2021</span>
+                                        <h5 class="text-nowrap mb-2">Umumiy kitoblar soni </h5>
                                     </div>
                                     <div class="mt-sm-auto">
-                                        <small class="text-success text-nowrap fw-semibold"
-                                        ><i class="bx bx-chevron-up"></i> 68.2%</small
-                                        >
-                                        <h3 class="mb-0">$84,686k</h3>
+                                        <h3 class="mb-0"> {{ $all_books_count }} ta</h3>
                                     </div>
                                 </div>
                                 <div id="profileReportChart"></div>

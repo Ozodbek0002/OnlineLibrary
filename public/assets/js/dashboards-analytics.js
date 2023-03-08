@@ -350,6 +350,7 @@
         }
       }
     };
+
   if (typeof growthChartEl !== undefined && growthChartEl !== null) {
     const growthChart = new ApexCharts(growthChartEl, growthChartOptions);
     growthChart.render();
@@ -357,6 +358,7 @@
 
   // Profit Report Line Chart
   // --------------------------------------------------------------------
+
   const profileReportChartEl = document.querySelector('#profileReportChart'),
     profileReportChartConfig = {
       chart: {
