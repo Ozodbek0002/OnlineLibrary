@@ -13,6 +13,8 @@
     borderColor = config.colors.borderColor;
 
 
+
+
     // Total Revenue Report Chart - Bar Chart
     // --------------------------------------------------------------------
     const totalRevenueChartEl = document.querySelector('#totalRevenueChart'),
@@ -275,6 +277,8 @@
         const totalRevenueChart = new ApexCharts(totalRevenueChartEl, totalRevenueChartOptions);
         totalRevenueChart.render();
     }
+
+
 
 
 

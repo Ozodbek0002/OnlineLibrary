@@ -43,6 +43,15 @@ class DashboardController extends Controller
             'rent_monthly'=>$rent_monthly,
             'sell_monthly'=>$sell_monthly,
             'all_books_monthly'=>$all_books_monthly,
+            'laptop_count_20'=>20,
+            'laptop_count_21'=>30,
+            'laptop_count_22'=>40,
+            'phone_count_20'=>20,
+            'phone_count_21'=>30,
+            'phone_count_22'=>40,
+            'desktop_count_20'=>20,
+            'desktop_count_21'=>30,
+            'desktop_count_22'=>40,
         ]);
     }
 }

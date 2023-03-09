@@ -93,6 +93,7 @@
         </div>
 
 
+
         <!--/ Total Revenue -->
         <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
 
@@ -155,25 +156,11 @@
             </div>
 
 
-
-            <div class="col-md-12">
-                <h1 class="text-center">Laravel 9 Dynamic Line Chart Example - Techsolutionstuff</h1>
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="chart-container">
-                                    <div class="chart has-fixed-height" id="line_stacked"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
-
     </div>
+
+    <canvas id="myChart" height="100px"></canvas>
 
 
 
@@ -189,6 +176,35 @@
 
 
 
+    </script>
+
+    <script type="text/javascript">
+
+        var users =  {{ Js::from($all_books_monthly) }};
+
+        const data = {
+            labels: months,
+            datasets: [{
+                label: 'My First dataset',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: users,
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
 
     </script>
+
+
+
 @endsection
