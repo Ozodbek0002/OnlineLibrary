@@ -51,12 +51,21 @@
                                 <td>{{ $order->created_at->format('d-m-Y') }}</td>
 
                                 <td>
-                                    @if($order->busy_id ==2)
+
+                                    @if($order->busy_id ==2 )
                                         <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
                                                 type="button" class="btn btn-outline-success  btn-sm">
                                                {{ $order->busy->name }}
                                         </button>
                                     @endif
+                                    @if($order->busy_id ==3 )
+                                        <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
+                                                type="button" class="btn btn-outline-success  btn-sm">
+                                               {{ $order->busy->name }}
+                                        </button>
+                                    @endif
+
+
                                     @if($order->busy_id ==1)
                                             <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
                                                     type="button" class="btn btn-outline-primary  btn-sm">

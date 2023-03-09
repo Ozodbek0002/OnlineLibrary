@@ -160,13 +160,14 @@
 
     </div>
 
-    <canvas id="myChart" height="100px"></canvas>
+
 
 
 
 @endsection
 
 @section('script')
+
     <script >
         var months = ['Yan', 'Fev', 'Mar', 'Apr', 'May', 'Iyun', 'Iyul', 'Avg', 'Sen', 'Okt', 'Noy', 'Dek'];
         var rent_monthly = @json($rent_monthly) ;
@@ -176,32 +177,6 @@
 
 
 
-    </script>
-
-    <script type="text/javascript">
-
-        var users =  {{ Js::from($all_books_monthly) }};
-
-        const data = {
-            labels: months,
-            datasets: [{
-                label: 'My First dataset',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
-                data: users,
-            }]
-        };
-
-        const config = {
-            type: 'line',
-            data: data,
-            options: {}
-        };
-
-        const myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
 
     </script>
 

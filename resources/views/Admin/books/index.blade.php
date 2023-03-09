@@ -79,6 +79,7 @@
                                                 <i class="bx bx-trash"></i>
                                             </span>
                                     </button>
+
                                     <a class="btn btn-warning btn-sm"
                                        href="{{ route('admin.books.edit',$book->id) }}">
                                             <span class="btn-label">
