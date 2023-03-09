@@ -153,6 +153,23 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="col-md-12">
+                <h1 class="text-center">Laravel 9 Dynamic Line Chart Example - Techsolutionstuff</h1>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="chart-container">
+                                    <div class="chart has-fixed-height" id="line_stacked"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
