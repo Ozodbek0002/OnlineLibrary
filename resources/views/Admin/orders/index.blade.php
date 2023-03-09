@@ -33,14 +33,15 @@
 
                         @foreach($orders as $ind=>$order)
                             <tr>
-                                <td class="col-1">{{($orders->currentpage()-1)*($orders->perpage())+$ind+1}}</td>
+                                <td >{{($orders->currentpage()-1)*($orders->perpage())+$ind+1}}</td>
                                 <td>{{ $order->book->title }}</td>
 
                                 <td>{{ $order->count }}</td>
+
                                 <td>
 
-                                    @if($order->busy_id ==1)
-                                    {{ number_format( (((int)date("d")-(int)$order->created_at->format('d')+1) * $order->book->price_daily), 0, ',', ',') }}
+                                    @if($order->busy_id ==1 || $order->busy_id ==3 )
+                                    {{ number_format( (((int)date("d")-(int)$order->created_at->format('d')) * $order->book->price_daily), 0, ',', ',') }}
                                     @endif
 
                                     @if($order->busy_id ==2)
@@ -48,7 +49,21 @@
                                     @endif
 
                                 </td>
-                                <td>{{ $order->created_at->format('d-m-Y') }}</td>
+
+                                <td class=" col-2">
+                                  @if($order->busy_id==1 || $order->busy_id==3 )
+                                    {{ $order->created_at->format('d-m-Y') }}
+                                        <br>
+                                      {{ (int)date("d")-(int)$order->created_at->format('d')  }} kun
+                                    @else
+                                    {{ $order->created_at->format('d-m-Y') }}
+
+                                  @endif
+
+
+
+
+                                </td>
 
                                 <td>
 
@@ -58,9 +73,10 @@
                                                {{ $order->busy->name }}
                                         </button>
                                     @endif
+
                                     @if($order->busy_id ==3 )
                                         <button data-bs-toggle="modal" data-bs-target="#showModal{{$order->id}}"
-                                                type="button" class="btn btn-outline-success  btn-sm">
+                                                type="button" class="btn btn-outline-warning  btn-sm">
                                                {{ $order->busy->name }}
                                         </button>
                                     @endif
@@ -90,7 +106,11 @@
                                 </td>
                                 <td>
                                     @if($order->is_active ==1)
+                                        <button data-bs-toggle="modal" data-bs-target="#sentModal{{$order->id}}"
+                                                type="button" class="btn btn-success  btn-sm">
                                         <span class="badge bg-success">Yangi</span>
+                                        </button>
+
                                     @endif
                                     @if($order->is_active ==0)
                                         <span class="badge bg-primary">Yuborildi</span>
@@ -98,16 +118,16 @@
 
                                 </td>
 
-                                <td class="col-2">
+                                <td>
 
 
 
-                                    <button data-bs-toggle="modal" data-bs-target="#sentModal{{$order->id}}"
-                                            type="button" class="btn btn-info  btn-sm">
-                                            <span class="btn-label">
-                                                <i class="fa fa-plane"></i>
-                                            </span>
-                                    </button>
+{{--                                    <button data-bs-toggle="modal" data-bs-target="#sentModal{{$order->id}}"--}}
+{{--                                            type="button" class="btn btn-info  btn-sm">--}}
+{{--                                            <span class="btn-label">--}}
+{{--                                                <i class="fa fa-plane"></i>--}}
+{{--                                            </span>--}}
+{{--                                    </button>--}}
 
 
                                     <button data-bs-toggle="modal" data-bs-target="#deleteModal{{$order->id}}"
@@ -116,6 +136,8 @@
                                                 <i class="bx bx-trash"></i>
                                             </span>
                                     </button>
+
+
 
 
                                     {{-- pay  Modals--}}
