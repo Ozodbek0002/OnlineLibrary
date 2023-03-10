@@ -104,6 +104,7 @@
                                     @endif
 
                                 </td>
+
                                 <td>
                                     @if($order->is_active ==1)
                                         <button data-bs-toggle="modal" data-bs-target="#sentModal{{$order->id}}"
@@ -255,6 +256,7 @@
 
 
                                 </td>
+
                             </tr>
                         @endforeach
 
