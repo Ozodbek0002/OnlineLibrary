@@ -33,21 +33,22 @@
                 </div>
                 <div class="col-md-8">
                     <div id="map">
-                        <iframe
-                            src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            width="100%" height="330px" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2519.5705392550612!2d60.6056422909871!3d41.56281354846138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc9397492ef0f%3A0x1533d3774f556e03!2sMicrodistrict%203%2C%20Urgench%2C%20Uzbekistan!5e1!3m2!1sen!2s!4v1678544795056!5m2!1sen!2s"
+                                width="100%" height="330px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="left-content">
                         <h4>Biz haqimizda</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester
-                            consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur adipisic
-                            elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti.</p>
+                        <p>
+                            Biz sizga eng yaxshi kitoblarni taklif qilamiz. Bizning kitoblarni o'zingizga moslashtirib, sizga kerakli kitoblarni tanlang. Bizning kitoblarni sizga eng yaxshi narxga sotib olishingiz mumkin.
+                        </p>
                         <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+
                         </ul>
                     </div>
                 </div>
