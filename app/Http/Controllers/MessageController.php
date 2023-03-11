@@ -13,7 +13,7 @@ class MessageController extends Controller
     public function index(): Response
     {
         $messages = Message::latest()->paginate(5);
-        return response(view('admin.messages.index',[
+        return response(view('Admin.messages.index',[
             'messages'=>$messages
         ]));
 
