@@ -34,24 +34,15 @@ class DashboardController extends Controller
 
 
 
-        return view('admin.dashboard',[
-            'sell_books_count'=>$sell_books_count,
-            'reading_books_count'=>$reading_books_count,
-            'books_price'=>$books_price,
-            'books_count'=>$books_count,
-            'all_books_count'=>$all_books_count,
-            'rent_monthly'=>$rent_monthly,
-            'sell_monthly'=>$sell_monthly,
-            'all_books_monthly'=>$all_books_monthly,
-            'laptop_count_20'=>20,
-            'laptop_count_21'=>30,
-            'laptop_count_22'=>40,
-            'phone_count_20'=>20,
-            'phone_count_21'=>30,
-            'phone_count_22'=>40,
-            'desktop_count_20'=>20,
-            'desktop_count_21'=>30,
-            'desktop_count_22'=>40,
+        return view('Admin.dashboard',[
+            'sell_books_count'=>$sell_books_count ?? 0,
+            'reading_books_count'=>$reading_books_count ?? 0,
+            'books_price'=>$books_price ?? 0,
+            'books_count'=>$books_count ?? 0,
+            'all_books_count'=>$all_books_count ?? 0,
+            'rent_monthly'=>$rent_monthly ?? 0,
+            'sell_monthly'=>$sell_monthly ?? 0,
+            'all_books_monthly'=>$all_books_monthly ?? 0,
         ]);
     }
 }

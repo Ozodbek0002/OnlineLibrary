@@ -16,7 +16,7 @@ class BookController extends Controller
     public function index(): Response
     {
         $books = Book::latest()->paginate(5);
-        return response(view('admin.books.index', [
+        return response(view('Admin.books.index', [
             'books'=>$books
         ]));
     }
@@ -26,7 +26,7 @@ class BookController extends Controller
     {
         $categories = Category::all();
         $cover = Cover::all();
-        return response(view('admin.books.create',[
+        return response(view('Admin.books.create',[
             'categories' => $categories,
             'cover' => $cover,
         ]));
@@ -89,7 +89,7 @@ class BookController extends Controller
 
         $categpries = Category::all();
         $covers = Cover::all();
-        return response(view('admin.books.edit',[
+        return response(view('Admin.books.edit',[
             'book' => $book,
             'categories'=>$categpries,
             'covers'=>$covers

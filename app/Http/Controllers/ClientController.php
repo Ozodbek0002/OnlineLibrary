@@ -16,7 +16,7 @@ class ClientController extends Controller
     public function index(): View
     {
         $orders = Order::latest()->paginate(5);
-        return view('admin.orders.index', [
+        return view('Admin.orders.index', [
             'orders'=>$orders
         ]);
     }
