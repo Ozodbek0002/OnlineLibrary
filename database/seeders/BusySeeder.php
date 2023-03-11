@@ -21,5 +21,11 @@ class BusySeeder extends Seeder
         $busy = Busy::create([
             'name' => 'Sotildi',
         ]);
+
+         $busy = Busy::create([
+            'name' => 'do\'konimizda',
+        ]);
+
+
     }
 }
