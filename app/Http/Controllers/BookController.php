@@ -106,7 +106,7 @@ class BookController extends Controller
         $book->cover_id = $request->cover_id;
         $book->price = $request->price;
         $book->price_daily = $request->price_daily;
-        $book->page = $request->page;
+        $book->count = $request->count;
         $book->page = $request->page;
 
         if ($request->image != null) {
