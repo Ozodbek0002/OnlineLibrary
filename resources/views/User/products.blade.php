@@ -55,7 +55,7 @@
                                                          alt=""></a>
                                         <div class="down-content">
                                             <a  href="{{route('product',$book->id)}}" ><h4>{{substr($book->title,0,17)}}...</h4></a>
-                                            <h6>{{$book->price}} so'm</h6>
+                                            <h6>{{ number_format( $book->price, 0, ',', ' ') }} so'm</h6>
                                             <p> {{$book->author}} </p>
                                             <ul class="stars">
                                                 <li><i class="fa fa-star"></i></li>
