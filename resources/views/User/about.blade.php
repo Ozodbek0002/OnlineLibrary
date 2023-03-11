@@ -34,13 +34,15 @@
                     <div class="left-content">
                         <h4> Bu sayt nima uchun yaratildi?  </h4>
                         <p>
-                            Bismillahi rohmani rohim
+                            Bismillahi rohmani rohim avvalo ilim olish har bir musulmon uchun farz bo'lgan amal.
+                            Ko'p insonlarni kitob o'qib ilim olishi va shu ilmini yaxshi amallar ila birga qo'llashi va 2 dunyoda halovatga erishishini Allohdan umid qilgan holda
+                            shu ishga qo'l urdik. Bu sayt orqali uydan chiqmasdan hohlagan kitobingizni buyurtma qilishingiz va hattoki
+                            ijaraga olishingiz ha mumkin shuning bilan birga bizning yetkazib berish hizmati orqali sizga kerakli kitobni
+                            yetkazib beramiz.
                         </p>
                         <ul class="social-icons">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -54,20 +56,20 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Our Team Members</h2>
+                        <h2>Biznign jamoa</h2>
                     </div>
                 </div>
+
                 <div class="col-md-4">
                     <div class="team-member">
                         <div class="thumb-container">
-                            <img src="user/assets/images/team_01.jpg" alt="">
+                            <img style="width: 100%; height: 350px" src="{{asset('user/assets/images/Iam.jpg')}}" alt="">
                             <div class="hover-effect">
                                 <div class="hover-content">
                                     <ul class="social-icons">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -79,116 +81,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="team-member">
-                        <div class="thumb-container">
-                            <img src="user/assets/images/team_02.jpg" alt="">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <ul class="social-icons">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="down-content">
-                            <h4>Karry Pitcher</h4>
-                            <span>Product Expert</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-member">
-                        <div class="thumb-container">
-                            <img src="user/assets/images/team_03.jpg" alt="">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <ul class="social-icons">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="down-content">
-                            <h4>Michael Soft</h4>
-                            <span>Chief Marketing</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-member">
-                        <div class="thumb-container">
-                            <img src="user/assets/images/team_04.jpg" alt="">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <ul class="social-icons">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="down-content">
-                            <h4>Mary Cool</h4>
-                            <span>Product Specialist</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-member">
-                        <div class="thumb-container">
-                            <img src="user/assets/images/team_05.jpg" alt="">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <ul class="social-icons">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="down-content">
-                            <h4>George Walker</h4>
-                            <span>Product Photographer</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-member">
-                        <div class="thumb-container">
-                            <img src="user/assets/images/team_06.jpg" alt="">
-                            <div class="hover-effect">
-                                <div class="hover-content">
-                                    <ul class="social-icons">
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="down-content">
-                            <h4>Kate Town</h4>
-                            <span>General Manager</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
