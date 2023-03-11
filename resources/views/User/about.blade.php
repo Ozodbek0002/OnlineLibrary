@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Our Background</h2>
+                        <h2> Bizning maqsadimiz </h2>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -32,8 +32,10 @@
                 </div>
                 <div class="col-md-6">
                     <div class="left-content">
-                        <h4>Who we are &amp; What we do?</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis.</p>
+                        <h4> Bu sayt nima uchun yaratildi?  </h4>
+                        <p>
+                            Bismillahi rohmani rohim
+                        </p>
                         <ul class="social-icons">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
