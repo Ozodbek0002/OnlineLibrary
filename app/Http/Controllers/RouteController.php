@@ -89,6 +89,8 @@ class RouteController extends Controller
         $order  = new Order();
         $book = Book::find($request->book_id);
 
+
+
         if ($book->count < $request->count || $book->count == 0){
             return redirect()->back()->withErrors('Siz so\'ragan miqdorda kitob mavjud emas. Bizda joriy vaqtda '.$book->count.' ta kitob mavjud');
         }
@@ -99,7 +101,8 @@ class RouteController extends Controller
         $order->busy_id = $busy_id;
         $order->count = $request->count;
 
-        if ($busy_id == 1) {
+
+        if ($busy_id == 2) {
             $order->price = $book->price * $request->count;
         }else{
             $order->price = $book->price_daily * $request->count ;

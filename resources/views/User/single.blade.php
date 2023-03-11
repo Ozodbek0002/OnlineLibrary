@@ -27,8 +27,8 @@
                         <p>Muallif:  <b style="font-size: 20px;">{{$book->author}}</b> </p>
                         <p>Jild:  <b style="font-size: 20px;">{{$book->cover->name}}</b> </p>
                         <p>Varaq:  <b style="font-size: 20px;">{{$book->page}}</b>  bet</p>
-                        <p>Narxi:  <b style="font-size: 20px;">{{$book->price}}</b>  so`m</p>
-                        <p>Ijara narxi (kun):  <b style="font-size: 20px;">{{$book->price_daily}}</b>  so`m</p>
+                        <p>Narxi:  <b style="font-size: 20px;">{{ number_format( $book->price, 0, ',', ' ')}}</b>  so`m</p>
+                        <p>Ijara narxi (kun):  <b style="font-size: 20px;">{{ number_format( $book->price_daily, 0, ',', ' ') }}</b>  so`m</p>
                         <p>Bizda bor:  <b style="font-size: 20px;">{{$book->count}}</b>  ta </p>
 
 
