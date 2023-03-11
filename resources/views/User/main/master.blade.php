@@ -14,6 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset('user/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
+    <link rel="icon" href="http://example.com/favicon.png">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{asset('user/assets/css/fontawesome.css')}}">
