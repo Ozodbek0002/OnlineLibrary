@@ -90,7 +90,6 @@ class RouteController extends Controller
         $book = Book::find($request->book_id);
 
 
-
         if ($book->count < $request->count || $book->count == 0){
             return redirect()->back()->withErrors('Siz so\'ragan miqdorda kitob mavjud emas. Bizda joriy vaqtda '.$book->count.' ta kitob mavjud');
         }

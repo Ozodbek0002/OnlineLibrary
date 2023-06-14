@@ -14,7 +14,6 @@
                             <p class="mb-4">
                                 Hozircha <span class="fw-bold"></span> o'sish yaxshi
                             </p>
-
                             {{--                        <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>--}}
                         </div>
                     </div>

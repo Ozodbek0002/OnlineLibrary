@@ -120,6 +120,7 @@ class BookController extends Controller
             $imagename = $request->file('image')->getClientOriginalName();
             $request->image->move('books', $imagename);
             $book->image = $imagename;
+
         };
 
 
