@@ -8,6 +8,8 @@ use App\Models\Message;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
+use mysql_xdevapi\Exception;
 
 class RouteController extends Controller
 {
@@ -111,6 +113,30 @@ class RouteController extends Controller
 
         $book->count = $book->count - $request->count;
         $book->save();
+        $matn="Yangi buyurtma mavjud \n";
+
+        if ($busy_id==2){
+        $matn.="💸 Uslub: Sotib olish "." \n";
+        }
+         if ($busy_id==1){
+        $matn.="💸 Uslub: Ijaraga olish "." \n";
+        }
+
+        $matn.="📕 Kitob nomi:".$book->title." \n";
+        $matn.="🔄 Soni:".$request->count." \n";
+        $matn.="🤑 Mijoz:".$request->user_name." \n";
+        $matn.="📞 Telefon raqami:".$request->phone." \n\n\n";
+        $matn.="🔊 Sayitga kirib buyurtmani jo'natish esdan chiqmasin 😉";
+
+        try {
+
+        Http::get("https://api.telegram.org/bot".env('TELEGRAM_BOT_API_TOKEN')."/sendMessage?chat_id=1366931310&text=$matn");
+
+        }catch (Exception $e){
+            $matn = "Buyurtma qabul qilishda xatolik bo`li iltimos saytdan tekshiring";
+            Http::get("https://api.telegram.org/bot".env('TELEGRAM_BOT_API_TOKEN')."/sendMessage?chat_id=1366931310&text=$matn");
+        }
+
 
 
         return redirect()->back()->with('msg', 'Buyurtma muvaffaqqiyatli qabul qilindi.  Tez orada siz bilan bog`lanamiz');
@@ -122,5 +148,7 @@ class RouteController extends Controller
         auth()->logout();
         return redirect()->route('/');
     }
+
+
 
 }
