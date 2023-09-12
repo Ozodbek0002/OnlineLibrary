@@ -113,7 +113,7 @@ class RouteController extends Controller
 
         $book->count = $book->count - $request->count;
         $book->save();
-        $matn="Yangi buyurtma mavjud \n";
+        $matn="Yangi buyurtma mavjud 🔊 \n\n";
 
         if ($busy_id==2){
         $matn.="💸 Uslub: Sotib olish "." \n";
