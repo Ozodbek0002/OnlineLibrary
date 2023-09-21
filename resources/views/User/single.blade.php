@@ -23,30 +23,35 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <div class="right-image">
+                        <img id="img" style="width: 400px; height: 500px" src="{{asset('books/'.$book->image)}}" alt="">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
                     <div class="left-content">
-                        <p>Muallif:  <b style="font-size: 20px;">{{$book->author}}</b> </p>
-                        <p>Jild:  <b style="font-size: 20px;">{{$book->cover->name}}</b> </p>
-                        <p>Varaq:  <b style="font-size: 20px;">{{$book->page}}</b>  bet</p>
-                        <p>Narxi:  <b style="font-size: 20px;">{{ number_format( $book->price, 0, ',', ' ')}}</b>  so`m</p>
-                        <p>Ijara narxi (kun):  <b style="font-size: 20px;">{{ number_format( $book->price_daily, 0, ',', ' ') }}</b>  so`m</p>
-                        <p>Bizda bor:  <b style="font-size: 20px;">{{$book->count}}</b>  ta </p>
+                        <p><b class="b"> Muallif: </b> <i class="b" > {{$book->author}}</i> </p>
+                        <p> <b class="b">  Jild: </b>  <i class="b" >{{$book->cover->name}} </i></p>
+                        <p> <b class="b"> Varaq: </b>  <i class="b" >{{$book->page}} bet </i> </p>
+                        <p> <b class="b"> Narxi: </b>  <i class="b" >{{ number_format( $book->price, 0, ',', ' ')}} so`m </i>
+                        </p>
+                        <p> <b class="b"> Ijara narxi (kun): </b> <i class="b" >{{ number_format( $book->price_daily, 0, ',', ' ') }}  so`m </i>
+                        </p>
+                        <p> <b class="b"> Bizda bor:  </b>  <i class="b" >{{$book->count}} ta </i>  </p>
 
 
                     </div>
                     <div class="down-content d-flex justify-content-around">
                         <div>
-                            <button  id="myBtn" type="button" class="btn btn-success"> Sotib olish </button>
+                            <button id="myBtn" type="button" class="btn btn-success"> Sotib olish</button>
                         </div>
                         <div>
-                            <button id="myBtn1" type="button" class="btn btn-warning"> Ijaraga olish </button>
+                            <button id="myBtn1" type="button" class="btn btn-warning"> Ijaraga olish</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="right-image">
-                        <img style="width: 300px; height: 400px" src="{{asset('books/'.$book->image)}}" alt="">
-                    </div>
-                </div>
+
+
             </div>
         </div>
     </div>
@@ -54,7 +59,7 @@
 
 
 
-{{--  Sell  Modal--}}
+    {{--  Sell  Modal--}}
     <div class="col-md-12">
         <div class="form">
 
@@ -68,7 +73,7 @@
                             <div class="row">
                                 <div class="col-lg-12 margin-tb">
                                     <div class="pull-right">
-                                        <h2> Ma'lumotlaringizni yozib qoldiring </h2>
+                                        <h2 class="info"> Ma'lumotlaringizni yozib qoldiring </h2>
                                     </div>
                                 </div>
                             </div>
@@ -82,30 +87,33 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Kitob:</b>
-                                            <strong >{{$book->title}} </strong>
+                                            <strong>{{$book->title}} </strong>
                                         </div>
                                     </div>
 
                                     <input type="hidden" name="book_id" class="form-control mb-3" value="{{$book->id}}">
 
-                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Soni:</b>
-                                            <input min="1" type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
+                                            <input min="1" type="number" name="count" class="form-control mb-3"
+                                                   placeholder="Sonini yozing" required>
                                         </div>
                                     </div>
 
-                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Ismingiz:</b>
-                                            <input type="text" name="user_name" class="form-control mb-3" placeholder="Ismingizni yozing" required>
+                                            <input type="text" name="user_name" class="form-control mb-3"
+                                                   placeholder="Ismingizni yozing" required>
                                         </div>
                                     </div>
 
-                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <b style="color: red;">Telefon raqamingiz: ( 90 123 45 67  )</b>
-                                            <input type="text" name="phone" class="form-control mb-3" placeholder="Telfon raqamingizni yozing" required>
+                                            <b style="color: red;">Telefon raqamingiz: ( 90 123 45 67 )</b>
+                                            <input type="text" name="phone" class="form-control mb-3"
+                                                   placeholder="Telfon raqamingizni yozing" required>
                                         </div>
                                     </div>
 
@@ -126,7 +134,7 @@
     </div>
 
 
-{{--  rent  Modal--}}
+    {{--  rent  Modal--}}
     <div class="col-md-12">
         <div class="form">
 
@@ -140,7 +148,7 @@
                             <div class="row">
                                 <div class="col-lg-12 margin-tb">
                                     <div class="pull-right">
-                                        <h2> Ma'lumotlaringizni yozib qoldiring </h2>
+                                        <h2 class="info">  Ma'lumotlaringizni yozib qoldiring </h2>
                                     </div>
                                 </div>
                             </div>
@@ -154,30 +162,33 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Kitob:</b>
-                                            <strong >{{$book->title}} </strong>
+                                            <strong>{{$book->title}} </strong>
                                         </div>
                                     </div>
 
                                     <input type="hidden" name="book_id" class="form-control mb-3" value="{{$book->id}}">
 
-                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Soni:</b>
-                                            <input min="1"  type="number" name="count" class="form-control mb-3" placeholder="Sonini yozing" required>
+                                            <input min="1" type="number" name="count" class="form-control mb-3"
+                                                   placeholder="Sonini yozing" required>
                                         </div>
                                     </div>
 
-                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Ismingiz:</b>
-                                            <input type="text" name="user_name" class="form-control mb-3" placeholder="Ismingizni yozing" required>
+                                            <input type="text" name="user_name" class="form-control mb-3"
+                                                   placeholder="Ismingizni yozing" required>
                                         </div>
                                     </div>
 
-                                     <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-                                            <b style="color: red;">Telefon raqamingiz: ( 90 123 45 67  )</b>
-                                            <input type="text" name="phone" class="form-control mb-3" placeholder="Telfon raqamingizni yozing" required>
+                                            <b style="color: red;">Telefon raqamingiz: ( 90 123 45 67 )</b>
+                                            <input type="text" name="phone" class="form-control mb-3"
+                                                   placeholder="Telfon raqamingizni yozing" required>
                                         </div>
                                     </div>
 
@@ -196,8 +207,6 @@
 
         </div>
     </div>
-
-
 
 @endsection
 

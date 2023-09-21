@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
 
     <title>Kutbxona</title>
 
@@ -23,7 +24,7 @@
 
 
     {{--    Alert--}}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.2/sweetalert2.all.min.js"></script>
 
     <style>
@@ -65,6 +66,52 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        @media only screen and (max-width: 2200px) {
+
+            #img {
+                width: 400px !important;
+                height: 500px !important;
+            }
+            .info{
+                font-size: 40px;
+                text-align: center;
+            }
+
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .right-image {
+                text-align: center;
+                margin: auto;
+
+            }
+
+            #img {
+                width: 300px !important;
+                height: 400px !important;
+                margin-bottom: 50px;
+            }
+
+            .info{
+                font-size: 20px !important;
+                text-align: center;
+            }
+
+            b{
+                font-size: 15px !important;
+            }
+
+
+        }
+
+        .b{
+            font-size: 20px !important;
+        }
+
+
+
+
     </style>
 
 </head>
@@ -99,13 +146,13 @@
 <script src="{{asset('user/assets/js/accordions.js')}}"></script>
 
 
-<script language = "text/Javascript">
+<script language="text/Javascript">
     cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-    function clearField(t){                   //declaring the array outside of the
-        if(! cleared[t.id]){                      // function makes it static and global
+    function clearField(t) {                   //declaring the array outside of the
+        if (!cleared[t.id]) {                      // function makes it static and global
             cleared[t.id] = 1;  // you could use true and false, but that's more typing
-            t.value='';         // with more chance of typos
-            t.style.color='#fff';
+            t.value = '';         // with more chance of typos
+            t.style.color = '#fff';
         }
     }
 </script>
