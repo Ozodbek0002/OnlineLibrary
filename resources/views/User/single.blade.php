@@ -96,8 +96,10 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
                                             <b style="color: red;">Soni:</b>
-                                            <input min="1" type="number" name="count" class="form-control mb-3"
-                                                   placeholder="Sonini yozing" required>
+                                            <label>
+                                                <input min="1" type="number" name="count" class="form-control mb-3"
+                                                       placeholder="Sonini yozing" required>
+                                            </label>
                                         </div>
                                     </div>
 
