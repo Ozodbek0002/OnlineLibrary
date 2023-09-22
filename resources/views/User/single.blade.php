@@ -202,9 +202,15 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                        <button type="submit" class="btn btn-primary">Saqlash</button>
+
+                                    <div  id="saqla1" class="col-xs-12 col-sm-12 col-md-12 text-center">
+                                        <button type="submit" id="submit1" class="btn btn-primary">Saqlash</button>
                                     </div>
+
+                                    <div  id="loading1" class="col-xs-12 col-sm-12 col-md-12 text-center  ">
+                                        <img src="{{ asset('user/assets/images/loading.svg') }}" alt="">
+                                    </div>
+
                                 </div>
                             </form>
 
@@ -234,18 +240,24 @@
         var span = document.getElementById("close");
         var spann = document.getElementById("submit");
         var span1 = document.getElementById("close1");
+        var spann1 = document.getElementById("submit1");
 
         var saqla = document.getElementById("saqla");
+        var saqla1 = document.getElementById("saqla1");
         var loading = document.getElementById("loading");
+        var loading1 = document.getElementById("loading1");
 
 
         // When the user clicks the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
             loading.style.display = "none";
+            saqla.style.display = "block";
         }
         btn1.onclick = function () {
             modal1.style.display = "block";
+            loading1.style.display = "none";
+            saqla1.style.display = "block";
         }
 
         // When the user clicks on <span> (x), close the modal
@@ -256,6 +268,12 @@
             saqla.style.display = "none";
             loading.style.display = "block";
         }
+
+         spann1.onclick = function () {
+            saqla1.style.display = "none";
+            loading1.style.display = "block";
+        }
+
 
         span1.onclick = function () {
             modal1.style.display = "none";
