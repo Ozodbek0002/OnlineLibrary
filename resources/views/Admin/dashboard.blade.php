@@ -169,13 +169,9 @@
 
     <script >
         var months = ['Yan', 'Fev', 'Mar', 'Apr', 'May', 'Iyun', 'Iyul', 'Avg', 'Sen', 'Okt', 'Noy', 'Dek'];
-        var rent_monthly = @json($rent_monthly) ;
-        var sell_monthly = @json($sell_monthly) ;
+        var sell_monthly = @json($rent_monthly) ;
+        var rent_monthly = @json($sell_monthly) ;
         var all_books_monthly = @json($all_books_monthly) ;
-
-
-
-
 
     </script>
 

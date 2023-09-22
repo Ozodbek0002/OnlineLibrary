@@ -7,7 +7,7 @@
                 <div class="col-md-12">
                     <div class="text-content">
                         <h4> Barcha Kitoblar </h4>
-                        <h2> Iqro Books </h2>
+                        <h2> Do'stlik Books </h2>
                     </div>
                 </div>
             </div>
