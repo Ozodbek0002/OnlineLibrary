@@ -26,6 +26,7 @@ class RouteController extends Controller
     }
 
     public function products(){
+
         $categories = Category::all();
         $books = Book::where('count','>',0)
             ->OrderBy('created_at','desc')

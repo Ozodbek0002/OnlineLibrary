@@ -30,14 +30,16 @@
 
                 <div class="col-md-6">
                     <div class="left-content">
-                        <p><b class="b"> Muallif: </b> <i class="b" > {{$book->author}}</i> </p>
-                        <p> <b class="b">  Jild: </b>  <i class="b" >{{$book->cover->name}} </i></p>
-                        <p> <b class="b"> Varaq: </b>  <i class="b" >{{$book->page}} bet </i> </p>
-                        <p> <b class="b"> Narxi: </b>  <i class="b" >{{ number_format( $book->price, 0, ',', ' ')}} so`m </i>
+                        <p><b class="b"> Muallif: </b> <i class="b"> {{$book->author}}</i></p>
+                        <p><b class="b"> Jild: </b> <i class="b">{{$book->cover->name}} </i></p>
+                        <p><b class="b"> Varaq: </b> <i class="b">{{$book->page}} bet </i></p>
+                        <p><b class="b"> Narxi: </b> <i class="b">{{ number_format( $book->price, 0, ',', ' ')}}
+                                so`m </i>
                         </p>
-                        <p> <b class="b"> Ijara narxi (kun): </b> <i class="b" >{{ number_format( $book->price_daily, 0, ',', ' ') }}  so`m </i>
+                        <p><b class="b"> Ijara narxi (kun): </b> <i
+                                class="b">{{ number_format( $book->price_daily, 0, ',', ' ') }} so`m </i>
                         </p>
-                        <p> <b class="b"> Bizda bor:  </b>  <i class="b" >{{$book->count}} ta </i>  </p>
+                        <p><b class="b"> Bizda bor: </b> <i class="b">{{$book->count}} ta </i></p>
 
 
                     </div>
@@ -119,9 +121,15 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                        <button type="submit" class="btn btn-primary">Saqlash</button>
+                                    <div  id="saqla" class="col-xs-12 col-sm-12 col-md-12 text-center">
+                                        <button type="submit" id="submit" class="btn btn-primary">Saqlash</button>
                                     </div>
+
+                                     <div  id="loading" class="col-xs-12 col-sm-12 col-md-12 text-center  ">
+                                         <img src="{{ asset('user/assets/images/loading.svg') }}" alt="">
+                                    </div>
+
+
                                 </div>
                             </form>
 
@@ -150,7 +158,7 @@
                             <div class="row">
                                 <div class="col-lg-12 margin-tb">
                                     <div class="pull-right">
-                                        <h2 class="info">  Ma'lumotlaringizni yozib qoldiring </h2>
+                                        <h2 class="info"> Ma'lumotlaringizni yozib qoldiring </h2>
                                     </div>
                                 </div>
                             </div>
@@ -224,12 +232,17 @@
         var btn1 = document.getElementById("myBtn1");
 
         var span = document.getElementById("close");
+        var spann = document.getElementById("submit");
         var span1 = document.getElementById("close1");
+
+        var saqla = document.getElementById("saqla");
+        var loading = document.getElementById("loading");
 
 
         // When the user clicks the button, open the modal
         btn.onclick = function () {
             modal.style.display = "block";
+            loading.style.display = "none";
         }
         btn1.onclick = function () {
             modal1.style.display = "block";
@@ -239,6 +252,11 @@
         span.onclick = function () {
             modal.style.display = "none";
         }
+        spann.onclick = function () {
+            saqla.style.display = "none";
+            loading.style.display = "block";
+        }
+
         span1.onclick = function () {
             modal1.style.display = "none";
         }

@@ -45,7 +45,7 @@ class Book extends Model
 
     public function sell_count()
     {
-        return $this->hasMany(Order::class)->where('busy_id',1)->sum('count');
+        return $this->hasMany(Order::class)->where('busy_id',2)->sum('count');
     }
     public function rent_count()
     {
