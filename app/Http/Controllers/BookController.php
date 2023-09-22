@@ -109,6 +109,7 @@ class BookController extends Controller
         $book->count = $request->count;
         $book->page = $request->page;
 
+
         if ($request->image != null) {
 
             $image_path = public_path("books/{$book->image}");
@@ -131,6 +132,13 @@ class BookController extends Controller
 
     public function destroy(Book $book): RedirectResponse
     {
+
+        $image_path = public_path("books/{$book->image}");
+
+        if (Book::exists($image_path)) {
+            File::delete($image_path);
+        }
+
         $book->delete();
         return redirect()->route('admin.books')->with('msg','Kitob muvaffaqiyatli o`chirildi.');
     }
