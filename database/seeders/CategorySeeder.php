@@ -23,11 +23,15 @@ class CategorySeeder extends Seeder
         ]);
 
         $category = Category::create([
-            'name' => 'Chet el',
+            'name' => 'Biznes',
         ]);
 
         $category = Category::create([
-            'name' => 'Baby',
+            'name' => 'Darslik',
+        ]);
+
+        $category = Category::create([
+            'name' => 'Bolalar uchun',
         ]);
 
     }

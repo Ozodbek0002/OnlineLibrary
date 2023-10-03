@@ -49,7 +49,7 @@ class Book extends Model
     }
     public function rent_count()
     {
-        return $this->hasMany(Order::class)->where('busy_id',2)->sum('count');
+        return $this->hasMany(Order::class)->where('busy_id',1)->sum('count');
     }
 
 }

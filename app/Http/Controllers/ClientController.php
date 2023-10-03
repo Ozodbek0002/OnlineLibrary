@@ -67,6 +67,11 @@ class ClientController extends Controller
     public function destroy($id): RedirectResponse
     {
         $order = Order::find($id);
+        $book = $order->book;
+        if ($order->is_active==1){
+            $book->count += $order->count;
+            $book->save();
+        }
         $order->delete();
         return redirect()->route('admin.clients')->with('msg','Xarid muvaffaqiyatli o`chirildi.');
     }

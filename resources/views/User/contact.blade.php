@@ -34,15 +34,19 @@
                 <div class="col-md-8">
                     <div id="map">
 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2519.5705392550612!2d60.6056422909871!3d41.56281354846138!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc9397492ef0f%3A0x1533d3774f556e03!2sMicrodistrict%203%2C%20Urgench%2C%20Uzbekistan!5e1!3m2!1sen!2s!4v1678544795056!5m2!1sen!2s"
-                                width="100%" height="330px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d687.2168046237291!2d60.935862269602794!3d41.54673900190805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDMyJzQ4LjMiTiA2MMKwNTYnMTEuNCJF!5e1!3m2!1sen!2s!4v1695985763196!5m2!1sen!2s"
+                            width="100%" height="330px" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="left-content">
                         <h4>Biz haqimizda</h4>
                         <p>
-                            Biz sizga eng yaxshi kitoblarni taklif qilamiz. Bizning kitoblarni o'zingizga moslashtirib, sizga kerakli kitoblarni tanlang. Bizning kitoblarni sizga eng yaxshi narxga sotib olishingiz mumkin.
+                            Biz sizga eng yaxshi kitoblarni taklif qilamiz. Bizning kitoblarni o'zingizga moslashtirib,
+                            sizga kerakli kitoblarni tanlang. Bizning kitoblarni sizga eng yaxshi narxga sotib
+                            olishingiz mumkin.
                         </p>
                         <ul class="social-icons">
 

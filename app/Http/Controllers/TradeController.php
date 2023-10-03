@@ -15,6 +15,7 @@ class TradeController extends Controller
         $order->save();
         return redirect()->back()->with('msg', 'Mahsulot mijozga jo`natildi');
     }
+
      public function pay($id)
     {
         $order = Order::find($id);
