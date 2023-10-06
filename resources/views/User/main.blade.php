@@ -42,10 +42,12 @@
                 @foreach($books as $book )
                     <div class="col-md-4">
                         <div class="product-item">
-                            <a  href="{{route('product',$book->id)}}" > <img style="width: 100%; height: 250px" src="books/{{$book->image}}" alt=""></a>
+                            <a href="{{route('product',$book->id)}}"> <img style="width: 100%; height: 250px"
+                                                                           src="books/{{$book->image}}" alt=""></a>
+                            <br>
+                            <h6 style=" margin-left: 230px;">{{ number_format( $book->price, 0, ',', ' ') }} so'm</h6>
                             <div class="down-content">
-                                <a  href="{{route('product',$book->id)}}"><h4>{{$book->title}}</h4></a>
-                                <h6>{{ number_format( $book->price, 0, ',', ' ') }} so'm</h6>
+                                <a href="{{route('product',$book->id)}}"><h4>{{$book->title}}</h4></a>
                                 <p> {{$book->author}} </p>
                                 <ul class="stars">
                                     <li><i class="fa fa-star"></i></li>
@@ -81,8 +83,10 @@
                     <div class="left-content">
                         <h4>Siz sifatli va hamyonbob kitoblarni qidiryapsizmi?</h4>
                         <p>
-                            Biz sizga eng yaxshi kitoblarni taklif qilamiz. Bizning kitoblarni o'zingizga moslashtirib, sizga
-                            kerakli kitoblarni tanlang. Bizning kitoblarni sizga eng yaxshi narxga sotib olishingiz mumkin.
+                            Biz sizga eng yaxshi kitoblarni taklif qilamiz. Bizning kitoblarni o'zingizga moslashtirib,
+                            sizga
+                            kerakli kitoblarni tanlang. Bizning kitoblarni sizga eng yaxshi narxga sotib olishingiz
+                            mumkin.
                         </p>
                         <ul class="featured-list">
                             <li><a href="#"> Halollik foydadan ustun</a></li>

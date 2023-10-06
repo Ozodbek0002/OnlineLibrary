@@ -53,9 +53,11 @@
                                     <div class="product-item">
                                         <a  href="{{route('product',$book->id)}}"><img style="width: 100%; height: 250px" src="books/{{$book->image}}"
                                                          alt=""></a>
+                                        <br>
+                                        <h6 style=" margin-left: 230px;">{{ number_format( $book->price, 0, ',', ' ') }} so'm</h6>
                                         <div class="down-content">
-                                            <a  href="{{route('product',$book->id)}}" ><h4>{{substr($book->title,0,17)}}...</h4></a>
-                                            <h6>{{ number_format( $book->price, 0, ',', ' ') }} so'm</h6>
+{{--                                            <a  href="{{route('product',$book->id)}}" ><h4>{{substr($book->title,0,17)}}...</h4></a>--}}
+                                            <a href="{{route('product',$book->id)}}"><h4>{{$book->title}}</h4></a>
                                             <p> {{$book->author}} </p>
                                             <ul class="stars">
                                                 <li><i class="fa fa-star"></i></li>

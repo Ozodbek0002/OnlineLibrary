@@ -52,6 +52,8 @@
 
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+{{--                            <li><a href="https://t.me/Zafarbek193"><i class="fa fa-phone"></i></a></li>--}}
+                            <li><a href="tel:+998933636191"><i class="fa fa-phone"></i></a></li>
 
                         </ul>
                     </div>
